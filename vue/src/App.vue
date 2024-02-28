@@ -1,20 +1,7 @@
 <template>
-  <div style="overflow-y:hidden;overflow-x: hidden">
-    <router-view />
-<!--    头部-->
-
-  </div>
-
+ <router-view></router-view>
 </template>
 
 <style>
 
 </style>
-<script>
-
-
-  export default {
-    name:"App",
-
-  }
-</script>
