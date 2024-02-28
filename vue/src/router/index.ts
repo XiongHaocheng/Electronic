@@ -10,11 +10,16 @@ const routes: Array<RouteRecordRaw> = [
         path: '/content',
         component: () => import('../views/content.vue'),
     },
+    {
+        path: '/login',
+	    name: 'Login',
+        component: () => import('../views/login.vue'),
+    },
 ];
 
 const router = createRouter({
     history: createWebHistory(),
-    routes, // 注意这里是 routes 而不是 routers
+    routes, 
 });
 
 export default router;

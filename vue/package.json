@@ -12,6 +12,7 @@
   "dependencies": {
     "element-plus": "^2.3.12",
     "vue": "^3.3.4",
+    "vue-meta": "^2.4.0",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
