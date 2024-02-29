@@ -1,11 +1,9 @@
 <script lang="ts" setup>
 import BaseHeader from "../components/layouts/BaseHeader.vue";
-import BaseSide from "../components/layouts/BaseSide.vue";
-import HelloWorld from "../components/HelloWorld.vue";
-import Logos from "../components/Logos.vue";
+import HelloWorld from "../components/MainInterface.vue";
 import { ref } from 'vue'
 
-const index = ref("2");
+const index = ref("1");
 
 // Function to update index, this function will be called when the custom event is emitted
 const updateIndex = (newIndex:string) => {
@@ -17,9 +15,7 @@ const updateIndex = (newIndex:string) => {
   <el-config-provider namespace="ep">
     <BaseHeader @update:index="updateIndex" />
     <div class="flex main-container">
-      <BaseSide />
       <div w="full" py="4">
-        <Logos my="4" />
         <HelloWorld :index="index" />
       </div>
     </div>

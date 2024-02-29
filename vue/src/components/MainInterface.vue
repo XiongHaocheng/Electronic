@@ -1,14 +1,15 @@
 <script setup>
 import { ref } from 'vue'
+import  NewView from './MainViews/NewView.vue'
 const props = defineProps(['index'])
 const awesome = ref(true)
 </script>
 
   <template>
+    
   <template v-if="index=='1'">
- <h1>界面1</h1>
+ <NewView />
   </template>
-
   <template v-if="index=='2-1'">
  <h1>界面2-1</h1>
   </template>
