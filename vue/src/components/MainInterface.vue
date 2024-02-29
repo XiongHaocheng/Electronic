@@ -11,7 +11,7 @@ const awesome = ref(true)
  <NewView />
   </template>
   <template v-if="index=='2-1'">
- <h1>界面2-1</h1>
+    2-1
   </template>
   <template v-if="index=='2-2'">
  <h1>界面2-2</h1>

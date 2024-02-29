@@ -18,7 +18,7 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 
         <el-tab-pane label="手机" name="first" >
       <template v-slot:default>
-        <div style="width: 1000px;height: 900px; margin-top: 0;">
+        <div style="width: 100vw;margin-top: 0;">
          
         <Phone />
       </div>
@@ -27,7 +27,7 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 
       <el-tab-pane label="电脑" name="second">
         <template v-slot:default>
-        电脑
+          
       </template>
       </el-tab-pane>
 
