@@ -1,7 +1,7 @@
 // router/index.ts
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-const routes: Array<RouteRecordRaw> = [
+const routes = [
     {
         path: '/',
         component: () => import('../views/index.vue'),
@@ -13,7 +13,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/login',
 	    name: 'Login',
-        component: () => import('../views/login.vue'),
+        component: () => import('../views/Login.vue'),
     },
 ];
 
