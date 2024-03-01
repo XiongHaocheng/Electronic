@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { isDark } from "d:/Code/Electronic/vue/src/composables/dark";
+import { isDark } from "../../composables/dark";
 </script>
 <template>
   <el-row>
