@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import BaseHeader from "../components/layouts/BaseHeader.vue";
-import HelloWorld from "../components/MainInterface.vue";
+import MainInterface from "../components/MainInterface.vue";
 import { ref } from 'vue'
 
 const index = ref("1");
@@ -17,7 +17,7 @@ const updateIndex = (newIndex:string) => {
     <BaseHeader @update:index="updateIndex" />
     <div class="flex main-container">
       <div w="full" py="4">
-        <HelloWorld :index="index" />
+        <MainInterface :index="index" />
       </div>
     </div>
   </el-config-provider>

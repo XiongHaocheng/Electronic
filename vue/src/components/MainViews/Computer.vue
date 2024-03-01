@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { isDark } from "../../composables/dark";
-
-
+import { isDark } from "d:/Code/Electronic/vue/src/composables/dark";
 </script>
 <template>
   <el-row>
@@ -102,7 +100,7 @@ import { isDark } from "../../composables/dark";
 <el-row>
   <el-col :span="4" :offset="10">
   <div class="Logo-text">
-<p class="title">SMARTPHONES</p>
+<p class="title">COMPUTERS</p>
 <p class="tip">Newly Launched Flagship Device</p>
 </div>
 </el-col>
