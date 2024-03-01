@@ -31,8 +31,10 @@ const handleSelect = (key: string, keyPath: string[]) => {
         <el-menu-item index="2-4-3">item three</el-menu-item>
       </el-sub-menu>
     </el-sub-menu>
-    <el-menu-item index="3" disabled>Info</el-menu-item>
+    <el-menu-item index="3" >Info</el-menu-item>
+  
     <el-menu-item index="4">Orders</el-menu-item>
+   
     <el-menu-item h="full" @click="toggleDark()">
       <button
         class="border-none w-full bg-transparent cursor-pointer"
@@ -41,5 +43,14 @@ const handleSelect = (key: string, keyPath: string[]) => {
         <i inline-flex i="dark:ep-moon ep-sunny" />
       </button>
     </el-menu-item>
+    <div class="flex-grow" />
+    <el-menu-item index="5" >购物车</el-menu-item>
+  
+  <el-menu-item index="6">user</el-menu-item>
   </el-menu>
 </template>
+<style>
+.flex-grow {
+  flex-grow: -1;
+}
+</style>

@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import  NewView from './MainViews/NewView.vue'
+import ShoppingCar from './MainViews/ShoppingCar.vue'
 const props = defineProps(['index'])
 const awesome = ref(true)
 </script>
@@ -21,6 +22,24 @@ const awesome = ref(true)
   </template>
   <template v-if="index=='2-4-1'">
  <h1>界面2-4-1</h1>
+  </template>
+  <template v-if="index=='2-4-2'">
+ <h1>界面2-4-2</h1>
+  </template>
+  <template v-if="index=='2-4-3'">
+ <h1>界面2-4-3</h1>
+  </template>
+  <template v-if="index=='3'">
+ <h1>界面3</h1>
+  </template>
+  <template v-if="index=='4'">
+ <h1>界面4</h1>
+  </template>
+  <template v-if="index=='5'">
+<ShoppingCar />
+  </template>
+  <template v-if="index=='6'">
+ <h1>界面6</h1>
   </template>
 </template>
 
