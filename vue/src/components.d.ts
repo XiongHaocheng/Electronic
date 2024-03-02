@@ -10,6 +10,10 @@ declare module 'vue' {
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSide: typeof import('./components/layouts/BaseSide.vue')['default']
     Computer: typeof import('./components/MainViews/Computer.vue')['default']
+    ElAffix: typeof import('element-plus/es')['ElAffix']
+    ElAnchor: typeof import('element-plus/es')['ElAnchor']
+    ElAnchorLink: typeof import('element-plus/es')['ElAnchorLink']
+    ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
@@ -36,6 +40,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ShoppingCar: typeof import('./components/MainViews/ShoppingCar.vue')['default']
+    Test: typeof import('./components/MainViews/test.vue')['default']
     Validate: typeof import('./components/Validate.vue')['default']
   }
 }

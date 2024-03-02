@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import  NewView from './MainViews/NewView.vue'
 import ShoppingCar from './MainViews/ShoppingCar.vue'
+import test from "./MainViews/test.vue"
 const props = defineProps(['index'])
 const awesome = ref(true)
 </script>
@@ -40,6 +41,9 @@ const awesome = ref(true)
   </template>
   <template v-if="index=='6'">
  <h1>界面6</h1>
+  </template>
+  <template v-if="index=='7'">
+ <test />
   </template>
 </template>
 

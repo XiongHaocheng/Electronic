@@ -16,6 +16,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
     :default-active="activeIndex"
     class="el-menu-demo"
     mode="horizontal"
+    :ellipsis="false"
     @select="handleSelect"
   >
     <el-menu-item index="1">新品发布</el-menu-item>
@@ -35,7 +36,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
   
     <el-menu-item index="4">Orders</el-menu-item>
    
-    <el-menu-item h="full" @click="toggleDark()">
+    <el-menu-item h="full" @click="toggleDark()" >
       <button
         class="border-none w-full bg-transparent cursor-pointer"
         style="height: var(--ep-menu-item-height)"
@@ -45,12 +46,17 @@ const handleSelect = (key: string, keyPath: string[]) => {
     </el-menu-item>
     <div class="flex-grow" />
     <el-menu-item index="5" >购物车</el-menu-item>
-  
-  <el-menu-item index="6">user</el-menu-item>
+    <el-menu-item index="6" >user</el-menu-item>
+    <el-menu-item index="7">about</el-menu-item>
+    
+  <el-menu-item index="8">
+    <router-link to="/login" style="text-decoration: none; color: inherit;">exist</router-link>
+  </el-menu-item>
+
   </el-menu>
 </template>
 <style>
 .flex-grow {
-  flex-grow: -1;
+  flex-grow: 1;
 }
 </style>
