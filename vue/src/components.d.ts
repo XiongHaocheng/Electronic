@@ -12,8 +12,6 @@ declare module 'vue' {
     BaseSide: typeof import('./components/layouts/BaseSide.vue')['default']
     Computer: typeof import('./components/MainViews/Computer.vue')['default']
     ElAffix: typeof import('element-plus/es')['ElAffix']
-    ElAnchor: typeof import('element-plus/es')['ElAnchor']
-    ElAnchorLink: typeof import('element-plus/es')['ElAnchorLink']
     ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -30,9 +28,6 @@ declare module 'vue' {
     ElLink: typeof import('element-plus/es')['ElLink']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
-    Elogo: typeof import('./components/Elogo.vue')['default']
-    ELogo: typeof import('./components/ELogo.vue')['default']
-    Elogos: typeof import('./components/Elogos.vue')['default']
     ElRow: typeof import('element-plus/es')['ElRow']
     ElSkeleton: typeof import('element-plus/es')['ElSkeleton']
     ElSkeletonItem: typeof import('element-plus/es')['ElSkeletonItem']
@@ -50,8 +45,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     ShoppingCar: typeof import('./components/MainViews/ShoppingCar.vue')['default']
     Test: typeof import('./components/MainViews/test.vue')['default']
-    User: typeof import('./components/MainViews/User.vue')['default']
-    UserView: typeof import('./components/MainViews/UserView.vue')['default']
     Validate: typeof import('./components/Validate.vue')['default']
   }
   export interface ComponentCustomProperties {
