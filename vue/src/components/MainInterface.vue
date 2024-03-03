@@ -2,7 +2,9 @@
 import { ref } from 'vue'
 import  NewView from './MainViews/NewView.vue'
 import ShoppingCar from './MainViews/ShoppingCar.vue'
-import test from "./MainViews/test.vue"
+import About from './MainViews/About.vue'
+import UserView from './MainViews/UserView.vue'
+import Londing from './MainViews/Londing.vue'
 const props = defineProps(['index'])
 const awesome = ref(true)
 </script>
@@ -40,11 +42,18 @@ const awesome = ref(true)
 <ShoppingCar />
   </template>
   <template v-if="index=='6'">
- <h1>界面6</h1>
+<UserView />
   </template>
+ 
   <template v-if="index=='7'">
- <test />
+    <About />
   </template>
+  <template v-if="index=='8'">
+   
+ <Londing />
+
+</template>
+
 </template>
 
 

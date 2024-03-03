@@ -1,12 +1,14 @@
 <template>
-  <el-backtop :right="50" :bottom="100" />
+
   <div>
     <el-row>
-    <el-col :span="6" :offset='16'>
+      <el-col :span="12" :offset="4"><ELogo/></el-col>
+      
+    <el-col :span="6">
       <el-autocomplete
       v-model="search"
       :fetch-suggestions="querySearchAsync"
-      placeholder="Search"
+      placeholder="搜索"
       @select="handleSelect"
       :clearable="true"
       style="width: 290px;"
@@ -17,126 +19,141 @@
         </svg>
       </template>
     </el-autocomplete>
-
+<el-row>
+  <div class="m-4">
+    <p style="margin-left: -10px;">配送至：</p>
+    <el-cascader
+      placeholder="选择您的地址"
+      :options="options"
+      filterable
+      style="width: 290px;margin-left: -15px;"
+      clearable
+    />
+  </div>
+</el-row>
   </el-col>
   </el-row>
 
     <el-table
-      :data="filterTableData"
+      :data="tableData"
       style="width: 70%;margin-left: 15%;"
       @selection-change="handleSelectionChange"
     >
       <el-table-column type="selection" width="55"></el-table-column>
-      <el-table-column label="Image">
+      <el-table-column label="图片">
         <template v-slot="scope">
           <img :src="scope.row.imageUrl" style="width: 100px; height: 100px;" alt="table image" />
         </template>
       </el-table-column>
-      <el-table-column label="Date" prop="date"></el-table-column>
-      <el-table-column label="Name" prop="name"></el-table-column>
-      <el-table-column label="Price" prop="price"></el-table-column>
+      <el-table-column label="入车时间" prop="time"></el-table-column>
+      <el-table-column label="商品" prop="date"></el-table-column>
+      <el-table-column label="价格" prop="price"></el-table-column>
+      
+     
     <el-table-column>    
       <template v-slot="scope">
         <el-button
           link
           type="primary"
           size="small"
-          @click.prevent="deleteRow(scope.$index, filterTableData)"
+          @click.prevent="deleteRow(scope.$index)"
         >
-          Remove
+        <el-icon size="20"><Delete /></el-icon>
         </el-button>
         </template>
       </el-table-column>
-  
+      
     </el-table>
 
     <!-- 显示选中商品的总价格 -->
     
   </div>
   <el-affix position="bottom" :offset="10">
-    <el-card class="BottomMenu">
-    <div>Total Price: ${{ totalPrice }}</div>
-    <div>Selected Items: {{ selectedRows.length }}</div>
+    <el-card :class="{'Sdark-Card': isDark}" class="BottomMenu">
+      <el-row>
+    <el-col :span="2" :offset="18">
+      
+      <div>已选择<span style="color: red;">{{ selectedRows.length }}</span>件商品</div>
+    </el-col>
+    <el-col :span="2">
+      <div style="margin-top: -13px;">总价:<span style="color: red;font-size: 30px;margin-left: 10px;">{{ totalPrice }}</span></div>
+    </el-col>
+    <el-col :span="2">
+      <el-button type="danger" style="width: 130px;height: 60px;margin-top: -9px;margin-bottom: -9px;">购买</el-button>
+    </el-col>
+  </el-row>
+  
   </el-card>
   </el-affix>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref, onMounted } from 'vue'
-
+import { isDark } from "../../composables/dark";
 interface User {
-  date: string
-  name: string
-  imageUrl: string
-  price: string
+    date: string,
+    imageUrl:string,
+    price:string,
+    time:string,
+    name:string
 }
-
+import ELogo from '../ELogo.vue';
 const search = ref('')
 const selectedRows = ref<User[]>([])
 
 import { reactive } from 'vue'
 const tableData = reactive([
-  //...你的数据
+  //...数据
   {
-    date: '2016-05-03',
-    name: 'Tom',
+    date: '商品介绍',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
+    time:"2016-05-03",
+    name:'商品名字'
   },
   {
-    date: '2016-05-02',
-    name: 'John',
+    date: '商品介绍',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
+    time:"2016-05-03",
+    name:'商品名字'
   },
   {
-    date: '2016-05-04',
-    name: 'Morgan',
+    date: '商品介绍',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
+    time:"2016-05-03",
+    name:'商品名字'
   },
   {
-    date: '2016-05-01',
-    name: 'Jessy1',
+    date: '商品介绍',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
+    time:"2016-05-03",
+    name:'商品名字'
   },
   {
-    date: '2016-05-01',
-    name: 'Jessy2',
+    date: '商品介绍',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
+    time:"2016-05-03",
+    name:'商品名字'
   },
   {
-    date: '2016-05-01',
-    name: 'Jessy3',
+    date: '商品介绍',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
+    time:"2016-05-03",
+    name:'商品名字'
   },
   {
-    date: '2016-05-01',
-    name: 'Jessy4',
+    date: '商品介绍',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
+    time:"2016-05-03",
+    name:'商品名字'
   },
-  {
-    date: '2016-05-01',
-    name: 'Jessy5',
-    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
-    price:'100',
-  },
-  {
-    date: '2016-05-01',
-    name: 'Jessy6',
-    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
-    price:'100',
-  },
-  {
-    date: '2016-05-01',
-    name: 'Jessy7',
-    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
-    price:'100',
-  },
+ 
 ])
 
 
@@ -185,7 +202,278 @@ onMounted(() => {
 const deleteRow = (index: number) => {
   tableData.splice(index, 1)
 }
+const props = {
+  multiple: true,
+}
 
+const options = [
+  {
+    value: 'guide',
+    label: 'Guide',
+    children: [
+      {
+        value: 'disciplines',
+        label: 'Disciplines',
+        children: [
+          {
+            value: 'consistency',
+            label: 'Consistency',
+          },
+          {
+            value: 'feedback',
+            label: 'Feedback',
+          },
+          {
+            value: 'efficiency',
+            label: 'Efficiency',
+          },
+          {
+            value: 'controllability',
+            label: 'Controllability',
+          },
+        ],
+      },
+      {
+        value: 'navigation',
+        label: 'Navigation',
+        children: [
+          {
+            value: 'side nav',
+            label: 'Side Navigation',
+          },
+          {
+            value: 'top nav',
+            label: 'Top Navigation',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    value: 'component',
+    label: 'Component',
+    children: [
+      {
+        value: 'basic',
+        label: 'Basic',
+        children: [
+          {
+            value: 'layout',
+            label: 'Layout',
+          },
+          {
+            value: 'color',
+            label: 'Color',
+          },
+          {
+            value: 'typography',
+            label: 'Typography',
+          },
+          {
+            value: 'icon',
+            label: 'Icon',
+          },
+          {
+            value: 'button',
+            label: 'Button',
+          },
+        ],
+      },
+      {
+        value: 'form',
+        label: 'Form',
+        children: [
+          {
+            value: 'radio',
+            label: 'Radio',
+          },
+          {
+            value: 'checkbox',
+            label: 'Checkbox',
+          },
+          {
+            value: 'input',
+            label: 'Input',
+          },
+          {
+            value: 'input-number',
+            label: 'InputNumber',
+          },
+          {
+            value: 'select',
+            label: 'Select',
+          },
+          {
+            value: 'cascader',
+            label: 'Cascader',
+          },
+          {
+            value: 'switch',
+            label: 'Switch',
+          },
+          {
+            value: 'slider',
+            label: 'Slider',
+          },
+          {
+            value: 'time-picker',
+            label: 'TimePicker',
+          },
+          {
+            value: 'date-picker',
+            label: 'DatePicker',
+          },
+          {
+            value: 'datetime-picker',
+            label: 'DateTimePicker',
+          },
+          {
+            value: 'upload',
+            label: 'Upload',
+          },
+          {
+            value: 'rate',
+            label: 'Rate',
+          },
+          {
+            value: 'form',
+            label: 'Form',
+          },
+        ],
+      },
+      {
+        value: 'data',
+        label: 'Data',
+        children: [
+          {
+            value: 'table',
+            label: 'Table',
+          },
+          {
+            value: 'tag',
+            label: 'Tag',
+          },
+          {
+            value: 'progress',
+            label: 'Progress',
+          },
+          {
+            value: 'tree',
+            label: 'Tree',
+          },
+          {
+            value: 'pagination',
+            label: 'Pagination',
+          },
+          {
+            value: 'badge',
+            label: 'Badge',
+          },
+        ],
+      },
+      {
+        value: 'notice',
+        label: 'Notice',
+        children: [
+          {
+            value: 'alert',
+            label: 'Alert',
+          },
+          {
+            value: 'loading',
+            label: 'Loading',
+          },
+          {
+            value: 'message',
+            label: 'Message',
+          },
+          {
+            value: 'message-box',
+            label: 'MessageBox',
+          },
+          {
+            value: 'notification',
+            label: 'Notification',
+          },
+        ],
+      },
+      {
+        value: 'navigation',
+        label: 'Navigation',
+        children: [
+          {
+            value: 'menu',
+            label: 'Menu',
+          },
+          {
+            value: 'tabs',
+            label: 'Tabs',
+          },
+          {
+            value: 'breadcrumb',
+            label: 'Breadcrumb',
+          },
+          {
+            value: 'dropdown',
+            label: 'Dropdown',
+          },
+          {
+            value: 'steps',
+            label: 'Steps',
+          },
+        ],
+      },
+      {
+        value: 'others',
+        label: 'Others',
+        children: [
+          {
+            value: 'dialog',
+            label: 'Dialog',
+          },
+          {
+            value: 'tooltip',
+            label: 'Tooltip',
+          },
+          {
+            value: 'popover',
+            label: 'Popover',
+          },
+          {
+            value: 'card',
+            label: 'Card',
+          },
+          {
+            value: 'carousel',
+            label: 'Carousel',
+          },
+          {
+            value: 'collapse',
+            label: 'Collapse',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    value: 'resource',
+    label: 'Resource',
+    children: [
+      {
+        value: 'axure',
+        label: 'Axure Components',
+      },
+      {
+        value: 'sketch',
+        label: 'Sketch Templates',
+      },
+      {
+        value: 'docs',
+        label: 'Design Documentation',
+      },
+    ],
+  },
+]
 </script>
 
 <style>
@@ -224,8 +512,11 @@ const deleteRow = (index: number) => {
     }
   }
 .BottomMenu{
-  background-color: rgb(234, 233, 233);
+  background-color: rgb(234, 233, 233,0.6);
   width: 96vw;
   margin-left: 2vw;
+}
+.Sdark-Card.BottomMenu{
+  background-color: rgba(42, 42, 42, 0.6);
 }
 </style>
