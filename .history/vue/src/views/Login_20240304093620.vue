@@ -37,7 +37,7 @@
       <div class="login-container">
         <el-form ref="form" :model="form" :rules="rules" class="login-page">
           <h2 class="title" style="margin-bottom: 20px;text-align: center">登录</h2>
-          <el-form-item prop="user_name">
+          <el-form-item prop="username">
             <el-input v-model="form.user_name" placeholder="用户名" clearable>
               <template #prefix>
                 <el-icon class="el-input__icon">
@@ -150,7 +150,7 @@ export default {
       validCode: '',//通过valicode获取的验证码
       form: {},
       rules: {
-        user_name: [
+        username: [
           {
             required: true,
             message: '请输入用户名',

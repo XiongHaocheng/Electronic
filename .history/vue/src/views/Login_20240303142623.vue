@@ -37,8 +37,8 @@
       <div class="login-container">
         <el-form ref="form" :model="form" :rules="rules" class="login-page">
           <h2 class="title" style="margin-bottom: 20px;text-align: center">登录</h2>
-          <el-form-item prop="user_name">
-            <el-input v-model="form.user_name" placeholder="用户名" clearable>
+          <el-form-item prop="username">
+            <el-input v-model="form.username" placeholder="用户名" clearable>
               <template #prefix>
                 <el-icon class="el-input__icon">
                   <User />
@@ -150,7 +150,7 @@ export default {
       validCode: '',//通过valicode获取的验证码
       form: {},
       rules: {
-        user_name: [
+        username: [
           {
             required: true,
             message: '请输入用户名',
@@ -185,11 +185,17 @@ export default {
             return
           }
 
-          request.post("http://localhost:8087/user/login", this.form).then(res => {
+          request.post("http://localhost:9090/user/login", this.form).then(res => {
             if (res.code == 0) {
               ElMessage.success("登录成功")
               sessionStorage.setItem("user", JSON.stringify(res.data))//缓存用户信息
-              this.$router.push("/");
+              if (res.data.role === 1) {
+                // 如果角色是1，推送到界面A
+                this.$router.push("/manage");
+              } else if (res.data.role === 2) {
+                // 如果角色是2，推送到界面B
+                this.$router.push("/");
+              }
             } else {
               ElMessage.error(res.msg)
             }
