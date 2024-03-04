@@ -12,7 +12,7 @@ const updateIndex = (newIndex:string) => {
 </script>
 
 <template>
-  <el-backtop :right="50" :bottom="50" />
+  <el-backtop :right="50" :bottom="70" />
   <el-config-provider namespace="ep">
     <BaseHeader @update:index="updateIndex" />
     <div class="flex main-container">
