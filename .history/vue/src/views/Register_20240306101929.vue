@@ -52,7 +52,7 @@
     <script>
     import request from "../utils/request";
     import {ElMessage} from "element-plus";
-    import ValidCode from "../components/Validate.vue";
+    import ValidCode from "../components/";
     export default {
       name: "Login",
       components:{
