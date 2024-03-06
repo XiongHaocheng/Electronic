@@ -35,7 +35,7 @@
   </el-row>
 
     <el-table
-      :data="tableData"
+      :data="filterTableData"
       style="width: 70%;margin-left: 15%;"
       @selection-change="handleSelectionChange"
     >
@@ -105,53 +105,53 @@ import { reactive } from 'vue'
 const tableData = reactive([
   //...数据
   {
-    date: '商品介绍',
+    date: '商品介绍1',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
     time:"2016-05-03",
-    name:'商品名字'
+    name:'商品名字1'
   },
   {
-    date: '商品介绍',
+    date: '商品介绍2',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
     time:"2016-05-03",
-    name:'商品名字'
+    name:'商品名字2'
   },
   {
-    date: '商品介绍',
+    date: '商品介绍3',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
     time:"2016-05-03",
-    name:'商品名字'
+    name:'商品名字3'
   },
   {
-    date: '商品介绍',
+    date: '商品介绍4',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
     time:"2016-05-03",
-    name:'商品名字'
+    name:'商品名字4'
   },
   {
-    date: '商品介绍',
+    date: '商品介绍5',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
     time:"2016-05-03",
-    name:'商品名字'
+    name:'商品名字5'
   },
   {
-    date: '商品介绍',
+    date: '商品介绍6',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
     time:"2016-05-03",
-    name:'商品名字'
+    name:'商品名字6'
   },
   {
-    date: '商品介绍',
+    date: '商品介绍7',
     imageUrl:'.../../../picture/pms_1708570856.03118739.png',
     price:'100',
     time:"2016-05-03",
-    name:'商品名字'
+    name:'商品名字7'
   },
  
 ])
