@@ -2,8 +2,8 @@
     <div  class="login-container"  >
         <el-form ref="form" :model="form"    :rules="rules" class="login-page">
           <h2 class="title" style="margin-bottom: 20px">用户注册</h2>
-          <el-form-item prop="user_name" >
-            <el-input v-model="form.user_name" placeholder="请输入用户名" clearable >
+          <el-form-item prop="username" >
+            <el-input v-model="form.username" placeholder="请输入用户名" clearable >
               <template #prefix>
                 <el-icon class="el-input__icon"><User/></el-icon>
               </template>
@@ -63,7 +63,7 @@
           form:{},
           validCode: '',
           rules: {
-            user_name: [
+            username: [
               {
                 required: true,
                 message: '请输入用户名',
