@@ -4,7 +4,7 @@ import  NewView from './MainViews/NewView.vue'
 import Computer from './NewViews/Computer.vue'
 import Elephone from './NewViews/Elephone.vue'
 import Watch from './NewViews/Watch.vue'
-import Mouse from './NewViews/Mouse.vue'
+import Mouse from './NewViews/Mouses.vue'
 import Jianpan from './NewViews/Jianpan.vue'
 import Displayer from './NewViews/Displayer.vue'
 import ShoppingCar from './MainViews/ShoppingCar.vue'
@@ -30,7 +30,7 @@ const awesome = ref(true)
  <Watch></Watch>
   </template>
   <template v-if="index=='2-4-1'">
-    <Mouse></Mouse>
+    <Mouses></Mouses>
   </template>
   <template v-if="index=='2-4-2'">
     <Jianpan></Jianpan>
