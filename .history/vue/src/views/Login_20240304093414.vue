@@ -37,8 +37,8 @@
       <div class="login-container">
         <el-form ref="form" :model="form" :rules="rules" class="login-page">
           <h2 class="title" style="margin-bottom: 20px;text-align: center">登录</h2>
-          <el-form-item prop="user_name">
-            <el-input v-model="form.user_name" placeholder="用户名" clearable>
+          <el-form-item prop="username">
+            <el-input v-model="form.username" placeholder="用户名" clearable>
               <template #prefix>
                 <el-icon class="el-input__icon">
                   <User />
@@ -83,174 +83,6 @@
                     align-items: center;
                     height: 100px;
                     margin-top: 10px; /* 设置容器高度 */">
-          <div id="footer-2013" style="text-align: center;">
-            <div class="links" style="font: 12px/150% Arial,Verdana;color: #999;">
-              <a style="margin: 0px 10px;" rel="nofollow" target="_blank" href="">
-                关于我们
-              </a>
-              |
-              <a style="margin: 0px 10px;" rel="nofollow" target="_blank" href="">
-                联系我们
-              </a>
-              |
-              <a style="margin: 0px 10px;" rel="nofollow" target="_blank" href="">
-                人才招聘
-              </a>
-              |
-              <a style="margin: 0px 10px;" rel="nofollow" target="_blank" href="">
-                商家入驻
-              </a>
-              |
-              <a style="margin: 0px 10px;" rel="nofollow" target="_blank" href="">
-                广告服务
-              </a>
-              |
-              <a style="margin: 0px 10px;" rel="nofollow" target="_blank" href="">
-                手机京东
-              </a>
-              |
-              <a style="margin: 0px 10px;" target="_blank" href="">
-                友情链接
-              </a>
-              |
-              <a style="margin: 0px 10px;" target="_blank" href="">
-                销售联盟
-              </a>
-              |
-              <a style="margin: 0px 10px;" href="" target="_blank">
-                京东社区
-              </a>
-              |
-              <a style="margin: 0px 10px;" href="" target="_blank">
-                京东公益
-              </a>
-            </div>
-            <div class="copyright" style="font-size: 12px; color: #999;margin-top: 10px; ">
-              Copyright&nbsp;&copy;&nbsp;2004-2024&nbsp;&nbsp;京东JD.com&nbsp;版权所有
-            </div>
-          </div>
-        </div>
-      </div>
-  
-    </div>
-  </template>
-  
-  <script>
-  import request from "../utils/request";
-  import { ElMessage } from "element-plus";
-  import ValidCode from "../components/Validate.vue";
-  
-  export default {
-    name: "Login",
-    components: {
-      ValidCode
-    },
-    data() {
-      return {
-        validCode: '',//通过valicode获取的验证码
-        form: {},
-        rules: {
-          username: [
-            {
-              required: true,
-              message: '请输入用户名',
-              trigger: 'blur',
-            }
-          ],
-          password: [
-            {
-              required: true,
-              message: '请输入密码',
-              trigger: 'blur',
-            }
-          ]
-  
-        }
-  
-      }
-    },
-    methods: {
-      createValidCode(data) {
-        this.validCode = data
-      },
-      login() {
-        this.$refs['form'].validate((valid) => {
-          if (valid) {
-            if (!this.form.validCode) {
-              ElMessage.error("请填写验证码")
-              return
-            }
-            if (this.form.validCode.toLowerCase() !== this.validCode.toLowerCase()) {
-              ElMessage.error("验证码错误")
-              return
-            }
-  
-            request.post("http://localhost:9090/user/login", this.form).then(res => {
-              if (res.code == 0) {
-                ElMessage.success("登录成功")
-                sessionStorage.setItem("user", JSON.stringify(res.data))//缓存用户信息
-                this.$router.push("/")
-              } else {
-                ElMessage.error(res.msg)
-              }
-            })
-          }
-        })
-  
-      }
-    }
-  }
-  
-  </script>
-  <style scoped>
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    /* Full height of the viewport */
-  }
-  
-  .top-section {
-    height: 20%;
-    background-color: white;
-    /* Light gray background */
-  }
-  
-  .middle-section {
-    height: 60%;
-    background-color: #e0e0e0;
-    /* Lighter gray background */
-  }
-  
-  .bottom-section {
-    height: 20%;
-    background-color: white;
-    /* Lightest gray background */
-  }
-  
-  /*登录测试样式*/
-  .login-container {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-size: contain;
-    overflow: hidden;
-  }
-  
-  .login-page {
-    border-radius: 5px;
-    margin: 40px auto;
-    width: 420px;
-    padding: 35px 35px 15px;
-    background: #fff;
-    border: 1px solid #eaeaea;
-    box-shadow: 0 0 25px #cac6c6;
-  }
-  
-  .el-input__inner {
-    height: 40px;
-  }
-  </style>
         <div id="footer-2013" style="text-align: center;">
           <div class="links" style="font: 12px/150% Arial,Verdana;color: #999;">
             <a style="margin: 0px 10px;" rel="nofollow" target="_blank" href="">
@@ -318,7 +150,7 @@ export default {
       validCode: '',//通过valicode获取的验证码
       form: {},
       rules: {
-        user_name: [
+        username: [
           {
             required: true,
             message: '请输入用户名',
@@ -357,7 +189,13 @@ export default {
             if (res.code == 0) {
               ElMessage.success("登录成功")
               sessionStorage.setItem("user", JSON.stringify(res.data))//缓存用户信息
-              this.$router.push("/");
+              if (res.data.role === 1) {
+                // 如果角色是1，推送到界面A
+                this.$router.push("/manage");
+              } else if (res.data.role === 2) {
+                // 如果角色是2，推送到界面B
+                this.$router.push("/");
+              }
             } else {
               ElMessage.error(res.msg)
             }
