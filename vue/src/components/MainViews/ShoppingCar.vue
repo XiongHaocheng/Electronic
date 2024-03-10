@@ -56,7 +56,8 @@
           link
           type="primary"
           size="small"
-          @click.prevent="deleteRow(scope.$index)"
+          @click.prevent="showDeleteDialog(scope.$index)"
+          plain @click="dialogVisible = true"
         >
         <el-icon size="20"><Delete /></el-icon>
         </el-button>
@@ -64,7 +65,19 @@
       </el-table-column>
       
     </el-table>
-
+    <el-dialog
+  v-model="dialogVisible"
+  title="Tips"
+  width="500"
+>
+  <span>确定要删除吗</span>
+  <template #footer>
+    <div class="dialog-footer">
+      <el-button @click="dialogVisible = false">Cancel</el-button>
+      <el-button type="primary" @click="confirmDelete">Confirm</el-button>
+    </div>
+  </template>
+</el-dialog>
     <!-- 显示选中商品的总价格 -->
     
   </div>
@@ -100,7 +113,19 @@ interface User {
 import ELogo from '../ELogo.vue';
 const search = ref('')
 const selectedRows = ref<User[]>([])
-
+const dialogVisible = ref(false);
+const deleteRowIndex = ref(-1);
+const showDeleteDialog = (index:number) => {
+  deleteRowIndex.value = index;
+  dialogVisible.value = true;
+};
+const confirmDelete = () => {
+  if (deleteRowIndex.value !== -1) {
+    deleteRow(deleteRowIndex.value);
+    deleteRowIndex.value = -1; // 重置索引
+  }
+  dialogVisible.value = false; // 关闭对话框
+};
 import { reactive } from 'vue'
 const tableData = reactive([
   //...数据
@@ -155,8 +180,6 @@ const tableData = reactive([
   },
  
 ])
-
-
 const filterTableData = computed(() =>
   tableData.filter(
     (data) =>

@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import type { TabsPaneContext } from 'element-plus'
 import  Phone  from "./Phone.vue";
+import Peripheral from './Peripheral.vue';
 const activeName = ref('first')
 
 const handleClick = (tab: TabsPaneContext, event: Event) => {
@@ -48,7 +49,9 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
         </template>
        
         <template v-slot:default>
-        外设
+          <div style="width: 100vw; margin-top: 0;">
+      <Peripheral />
+    </div>
       </template>
       </el-tab-pane>
 
