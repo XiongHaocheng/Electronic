@@ -3,7 +3,7 @@ import UserOrders from '../subassembly/UserOrders.vue';
 import UserWallet from '../subassembly/UserWallet.vue';
 import NonPayment from '../subassembly/Non-payment.vue';
 import { ref } from 'vue';
-const selectedCardId = ref(0);
+const selectedCardId = ref(1);
 
 // 定义一个方法来处理接收到的 cardid
 const handleSelectCard = (cardid: number) => {
@@ -17,7 +17,7 @@ const handleSelectCard = (cardid: number) => {
   </el-row>
   <br>
   <el-row :gutter="20">
-    <el-col :span="11" :offset="1" ><UserOrders @select-card="handleSelectCard" /></el-col>
+    <el-col :span="12" :offset="1" ><UserOrders @select-card="handleSelectCard" /></el-col>
     <el-col :span="11">
       <template v-if="selectedCardId==0">
       <el-empty description="NoData" />
