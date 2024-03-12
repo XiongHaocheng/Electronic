@@ -1,6 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 import  NewView from './MainViews/NewView.vue'
+import Computer from './NewViews/Computer.vue'
+import Elephone from './NewViews/Elephone.vue'
+import Watch from './NewViews/Watch.vue'
+import Mouse from './NewViews/Mouses.vue'
+import Jianpan from './NewViews/Jianpan.vue'
+import Displayer from './NewViews/Displayer.vue'
 import ShoppingCar from './MainViews/ShoppingCar.vue'
 import About from './MainViews/About.vue'
 import UserView from './MainViews/UserView.vue'
@@ -15,22 +21,22 @@ const awesome = ref(true)
  <NewView />
   </template>
   <template v-if="index=='2-1'">
-    2-1
+    <Computer></Computer>
   </template>
   <template v-if="index=='2-2'">
- <h1>界面2-2</h1>
+ <Elephone></Elephone>
   </template>
   <template v-if="index=='2-3'">
- <h1>界面2-3</h1>
+ <Watch></Watch>
   </template>
   <template v-if="index=='2-4-1'">
- <h1>界面2-4-1</h1>
+    <Mouses></Mouses>
   </template>
   <template v-if="index=='2-4-2'">
- <h1>界面2-4-2</h1>
+    <Jianpan></Jianpan>
   </template>
   <template v-if="index=='2-4-3'">
- <h1>界面2-4-3</h1>
+    <Displayer></Displayer>
   </template>
   <template v-if="index=='3'">
  <h1>界面3</h1>

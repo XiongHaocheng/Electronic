@@ -37,8 +37,8 @@
       <div class="login-container">
         <el-form ref="form" :model="form" :rules="rules" class="login-page">
           <h2 class="title" style="margin-bottom: 20px;text-align: center">登录</h2>
-          <el-form-item prop="username">
-            <el-input v-model="form.username" placeholder="用户名" clearable>
+          <el-form-item prop="user_name">
+            <el-input v-model="form.user_name" placeholder="用户名" clearable>
               <template #prefix>
                 <el-icon class="el-input__icon">
                   <User />
@@ -138,7 +138,7 @@
 <script>
 import request from "../utils/request";
 import { ElMessage } from "element-plus";
-import ValidCode from "../components/Validate";
+import ValidCode from "F:/Electronic/vue/src/components/Validate.vue";
 
 export default {
   name: "Login",
@@ -150,7 +150,7 @@ export default {
       validCode: '',//通过valicode获取的验证码
       form: {},
       rules: {
-        username: [
+        user_name: [
           {
             required: true,
             message: '请输入用户名',

@@ -138,7 +138,7 @@
 <script>
 import request from "../utils/request";
 import { ElMessage } from "element-plus";
-import ValidCode from "../components/Validate";
+import ValidCode from "../"";
 
 export default {
   name: "Login",

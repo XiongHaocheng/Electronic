@@ -80,4 +80,3 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 }
 /* 调整内容与标签不在同一行的样式 */
 </style>
-  
