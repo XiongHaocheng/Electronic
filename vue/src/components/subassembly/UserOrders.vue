@@ -1,6 +1,6 @@
 <template>
     <div :class="{ 'dark': isDark }">
-  <el-card style="max-width: 730px;" class="UserOrdersCrad" shadow="always">
+  <el-card style="max-width: 800px;" class="UserOrdersCrad" shadow="always">
       <template #header>
         <div class="card-header">
           <span>我的订单</span>

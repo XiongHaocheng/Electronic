@@ -1,41 +1,16 @@
+
 <template>
-  <div class="app-container">
-    <!-- 走马灯 -->
-    
-    <div>
-      <el-carousel indicator-position="outside" height="400px">
-        <el-carousel-item>
-          <div style="width: 100%; height: 400px;"><img src="../../../picture/电脑走马灯1.png"
-              style="width: 100%; height: 100%;"></div>
-        </el-carousel-item>
-        <el-carousel-item>
-          <div style="width: 100%; height: 400px"><img src="../../../picture/电脑走马灯2.png"
-              style="width: 100%; height: 100%;"></div>
-        </el-carousel-item>
-        <el-carousel-item>
-          <div style="width: 100%; height: 400px;"><img src="../../../picture/电脑走马灯3.png"
-              style="width: 100%; height: 100%;"></div>
-        </el-carousel-item>
-        <el-carousel-item>
-          <div style="width: 100%; height: 400px;"><img src="../../../picture/电脑走马灯4.png"
-              style="width: 100%; height: 100%;"></div>
-        </el-carousel-item>
-      </el-carousel>
-    </div>
 
-    <div style="margin: 0 150px;">
-      <!-- 第一排 -->
-      <div class="card-container">
 
-        <div :class="{ 'dark': isDark }" class="card">
-          <div :body-style="{ padding: '0px' }" shadow="always"
-            style="display: flex; flex-direction: column; align-items: center;margin-top: -20px;">
-            <img
-              src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202401/gbom/6942103109607/428_428_B6CFED0EE70C4A06CA27D1F68C1BA19Emp.png"
-              style="width: 250px;">
-            <p style="font-size: 20px; font-weight: bold;margin-top: -5px;">HUAWEI Mate 60 RS 非凡大师</p>
-            <div style="font-size: 20px;">¥ 11999 起 ></div>
-          </div>
+<el-carousel indicator-position="outside"  height="400px">
+    <el-carousel-item>
+        <div style="width: 100%; height: 400px;">
+            <img src="../../../picture/手表1.png" style="width: 100%; height: 100%; ">
+        </div>
+    </el-carousel-item>
+    <el-carousel-item>
+        <div style="width: 100%; height: 400px;">
+            <img src="../../../picture/手表2.png" style="width: 100%; height: 100%; ">
         </div>
 
 
@@ -1047,11 +1022,14 @@
   /* 移除链接默认下划线 */
   border: 1px solid;
   border-radius: 20px;
-  /* 添加圆角 */
-  margin-left: 20px;
-  transition: background-color 0.3s;
-  /* 添加过渡效果 */
-  cursor: pointer;
-  /* 将光标设置为可点击 */
+  padding: 1px; /* 调整文本与边框的间距 */
+  font-size: 16px;
+  margin: 10px 550px;
 }
-</style>
+
+.watch {
+ width: 100%;
+ display: block;
+}
+  </style>
+  

@@ -65,19 +65,7 @@
       </el-table-column>
       
     </el-table>
-    <el-dialog
-  v-model="dialogVisible"
-  title="Tips"
-  width="500"
->
-  <span>确定要删除吗</span>
-  <template #footer>
-    <div class="dialog-footer">
-      <el-button @click="dialogVisible = false">取消</el-button>
-      <el-button type="primary" @click="confirmDelete">确定</el-button>
-    </div>
-  </template>
-</el-dialog>
+
     <!-- 显示选中商品的总价格 -->
     
   </div>
@@ -116,30 +104,62 @@ import { reactive } from 'vue'
 import ELogo from '../ELogo.vue';
 const search = ref('')
 const selectedRows = ref<User[]>([])
-const tableData = reactive<User[]>([]); // 声明购物车数据
-const dialogVisible = ref(false);
-const deleteRowIndex = ref(-1);
-const showDeleteDialog = (index:number) => {
-  deleteRowIndex.value = index;
-  dialogVisible.value = true;
-};
-const confirmDelete = () => {
-  if (deleteRowIndex.value !== -1) {
-    deleteRow(deleteRowIndex.value);
-    deleteRowIndex.value = -1; // 重置索引
-  }
-  dialogVisible.value = false; // 关闭对话框
-};
-// 发送请求获取购物车数据
-const fetchCartData = async () => {
-  try {
-    const response = await axios.post('http://localhost:9090/cart/display');
-    tableData.values = response.data; // 将返回的购物车数据赋值给tableData
-    tableData.splice(0, tableData.length, ...response.data.data); 
-  } catch (error) {
-    console.error('Error fetching cart data:', error);
-  }
-};
+
+import { reactive } from 'vue'
+const tableData = reactive([
+  //...数据
+  {
+    date: '商品介绍1',
+    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
+    price:'100',
+    time:"2016-05-03",
+    name:'商品名字1'
+  },
+  {
+    date: '商品介绍2',
+    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
+    price:'100',
+    time:"2016-05-03",
+    name:'商品名字2'
+  },
+  {
+    date: '商品介绍3',
+    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
+    price:'100',
+    time:"2016-05-03",
+    name:'商品名字3'
+  },
+  {
+    date: '商品介绍4',
+    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
+    price:'100',
+    time:"2016-05-03",
+    name:'商品名字4'
+  },
+  {
+    date: '商品介绍5',
+    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
+    price:'100',
+    time:"2016-05-03",
+    name:'商品名字5'
+  },
+  {
+    date: '商品介绍6',
+    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
+    price:'100',
+    time:"2016-05-03",
+    name:'商品名字6'
+  },
+  {
+    date: '商品介绍7',
+    imageUrl:'.../../../picture/pms_1708570856.03118739.png',
+    price:'100',
+    time:"2016-05-03",
+    name:'商品名字7'
+  },
+ 
+])
+
 
 const filterTableData = computed(() =>
   tableData.filter(
