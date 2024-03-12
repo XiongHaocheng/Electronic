@@ -42,7 +42,7 @@
       <el-table-column type="selection" width="55"></el-table-column>
       <el-table-column label="图片">
         <template v-slot="scope">
-          <img :src="scope.row.imageUrl" style="width: 100px; height: 100px;" alt="table image" />
+          <img :src="scope.row.imageurl" style="width: 100px; height: 100px;" alt="table image" />
         </template>
       </el-table-column>
       <el-table-column label="入车时间" prop="time"></el-table-column>
@@ -56,7 +56,8 @@
           link
           type="primary"
           size="small"
-          @click.prevent="deleteRow(scope.$index)"
+          @click.prevent="showDeleteDialog(scope.$index)"
+          plain @click="dialogVisible = true"
         >
         <el-icon size="20"><Delete /></el-icon>
         </el-button>
@@ -79,7 +80,7 @@
       <div style="margin-top: -13px;">总价:<span style="color: red;font-size: 30px;margin-left: 10px;">{{ totalPrice }}</span></div>
     </el-col>
     <el-col :span="2">
-      <el-button type="danger" style="width: 130px;height: 60px;margin-top: -9px;margin-bottom: -9px;">购买</el-button>
+      <el-button type="danger" style="width: 130px;height: 60px;margin-top: -9px;margin-bottom: -9px;" @click="cartPurchase">购买</el-button>
     </el-col>
   </el-row>
   
@@ -88,15 +89,18 @@
 </template>
 
 <script lang="ts" setup>
+import { ElMessage } from "element-plus";
+import axios from 'axios';
 import { computed, ref, onMounted } from 'vue'
 import { isDark } from "../../composables/dark";
 interface User {
     date: string,
-    imageUrl:string,
+    imageurl:string,
     price:string,
     time:string,
     name:string
 }
+import { reactive } from 'vue'
 import ELogo from '../ELogo.vue';
 const search = ref('')
 const selectedRows = ref<User[]>([])
@@ -162,7 +166,7 @@ const filterTableData = computed(() =>
     (data) =>
       !search.value || data.name.toLowerCase().includes(search.value.toLowerCase())
   )
-)
+);
 
 const totalPrice = computed(() => {
   return selectedRows.value.reduce((sum, row) => sum + parseFloat(row.price), 0)
@@ -193,15 +197,78 @@ const querySearchAsync = (queryString: string, cb: (arg: any) => void) => {
 }
 
 const handleSelect = (item: Record<string, any>) => {
-  console.log(item)
+  //console.log(item)
 }
 
 onMounted(() => {
+  fetchCartData();
   links.value = loadAll()
 })
-const deleteRow = (index: number) => {
-  tableData.splice(index, 1)
+
+const deleteRow = async (index: number) => {
+  const deletedRow = tableData[index]; // 获取要删除的行数据
+  // 从tableData中删除行
+  tableData.splice(index, 1);
+  try {
+    // 发送删除请求至后端
+    await axios.delete('http://localhost:9090/cart/delete', { data: deletedRow });
+    console.log('Deleted row from backend successfully');
+  } catch (error) {
+    console.error('Error deleting row from backend:', error);
+  }
 }
+const cartPurchase = () => {
+  // 获取已选择的商品信息
+  const selectedProducts = selectedRows.value;
+  // 构造要发送到后端的数据对象
+  const dataToSend = {
+    selectedProducts: selectedProducts,
+    totalPrice: totalPrice.value
+  };
+  
+  axios.post('http://localhost:9090/cart/purchase', selectedProducts)
+  .then(response => {
+    for (let i = 0; i < selectedProducts.length; i++) {
+      tableData.splice(deleteRowIndex.value+1, 1);
+}
+    ElMessage.success("购买成功")
+    // 处理后端返回的响应数据
+    console.log('Success:', response.data);
+    // 可能有其他操作，如重置已选商品列表等
+  })
+  .catch(error => {
+    // 处理错误情况
+    console.error('Error:', error);
+  });
+
+const currentTimestamp = new Date().getTime();// 获取当前时间的时间戳
+const newList = selectedProducts.map(product => ({
+    customerid: '1',
+    customername: 'hxc',
+    cid: '1',
+    cname: null,
+    ctime: currentTimestamp,
+    vid: null,
+    vname: null,
+    vtime: null,
+    status: '1',
+    finish: '1',
+    ftime: null,
+    total:  product.price,
+    remark: null
+}));
+// 
+const list = selectedProducts.map(product => product.date);
+
+ axios.post('http://localhost:9090/order/commit', newList)
+ .then(response =>{
+ })
+ axios.post('http://localhost:9090/order/commitsub', list)
+ .then(response =>{
+ })
+};
+
+
 const props = {
   multiple: true,
 }
@@ -520,3 +587,4 @@ const options = [
   background-color: rgba(42, 42, 42, 0.6);
 }
 </style>
+

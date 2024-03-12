@@ -255,6 +255,7 @@ import { isDark } from "../../composables/dark";
 }
 .Pbox-card1:hover{
   box-shadow: 0 0 8px 2px rgba(151, 148, 148, 0.6);
+  
 }
 .Logo-text{
   height: 400px;

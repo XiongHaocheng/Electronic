@@ -1,0 +1,1 @@
+@click.prevent="deleteRow(scope.$index)

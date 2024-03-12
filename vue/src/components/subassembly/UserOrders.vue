@@ -1,6 +1,6 @@
 <template>
     <div :class="{ 'dark': isDark }">
-  <el-card style="max-width: 730px;" class="UserOrdersCrad" shadow="always">
+  <el-card style="max-width: 800px;" class="UserOrdersCrad" shadow="always">
       <template #header>
         <div class="card-header">
           <span>我的订单</span>
@@ -22,7 +22,7 @@
     >
       <CreditCard />
     </el-icon>
-    <div style="margin-left: 4px;">
+    <div style="margin-left: 4px;width: 60px;">
       待付款
     </div>
   </el-card>
@@ -42,7 +42,7 @@
     >
     <Box />
     </el-icon>
-    <div style="margin-left: 4px;">
+    <div style="margin-left: 4px;width: 60px;">
       待收货
     </div>
   </el-card>
@@ -63,8 +63,8 @@
     >
     <ChatLineSquare />
     </el-icon>
-    <div style="margin-left: 12px;">
-      评价
+    <div style="margin-left: 12px;width: 60px;">
+      待评价
     </div>
   </el-card>
   </div>
@@ -84,7 +84,7 @@
     >
     <CircleCheck />
     </el-icon>
-    <div style="margin-left: -2px;margin-right: -7px;">
+    <div style="margin-left: -2px;margin-right: -7px;width: 80px;">
       退货售后
     </div>
   </el-card>
@@ -105,7 +105,7 @@
     >
     <Expand />
     </el-icon>
-    <div style="margin-left: -2px;margin-right: -7px;">
+    <div style="margin-left: -2px;margin-right: -7px;width: 80px;">
       全部订单
     </div>
   </el-card>
