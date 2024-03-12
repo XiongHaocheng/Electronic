@@ -252,8 +252,8 @@
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">Galaxy Watch5 Pro</p>
-                <p style="font-size: 12px;;">蓝牙版 45mm</p>
+                <p style="font-size: 15px; width: 180px;">Approach S62</p>
+                <p style="font-size: 12px;;">高尔夫GPS智能腕表</p>
                 <div style="display: flex;">
                   <div class="button1">
                     <p style="font-size: 1px;width: 200px;margin-left: -9px;margin-top: -8px;color: #f26e6e;">限时直降100元
@@ -270,7 +270,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Galaxy Watch5 Pro', 4])">立即购买</button>
+                  <button class="buy-now-button" @click="Purchase(['康帅傅红烧牛肉面', 4])">立即购买</button>
                 </div>
 
               </div>
@@ -827,7 +827,7 @@
 <script lang="ts" setup>
 import axios from 'axios';
 import { ElMessage } from "element-plus";
-const price = [2199, 6288, 2199,2199,2199]
+const price = [50, 50, 50,50,50,50,50,50,50,50,50]
 
   const Purchase = (value:any) =>{
     const currentTimestamp = new Date().getTime();// 获取当前时间的时间戳

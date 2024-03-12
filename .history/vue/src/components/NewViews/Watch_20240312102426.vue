@@ -116,7 +116,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['易耐时 epix Pro', 0])">立即购买</button>
+                  <button class="buy-now-button" @click="Purchase(['马良铅笔', 0])">立即购买</button>
                 </div>
 
               </div>
@@ -137,7 +137,7 @@
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">Approach S70</p>
+                <p style="font-size: 15px; width: 180px;">Approach S70 </p>
                 <p style="font-size: 12px;;">高尔夫 GPS 智能腕表</p>
                 <div style="display: flex;">
                   <div class="button1">
@@ -155,12 +155,19 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥7488</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Approach S70', 1])">立即购买</button>
+                  <button class="buy-now-button" @click="Purchase(['水桶', 1])">立即购买</button>
                 </div>
+
               </div>
+
+
             </div>
+
+
           </div>
+
         </div>
+
       </div>
 
       <!--新款上市-->
@@ -195,7 +202,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['MARQ Golfer (Gen 2)', 2])">立即购买</button>
+                  <button class="buy-now-button" @click="Purchase(['旺旺饼干', 2])">立即购买</button>
                 </div>
               </div>
 
@@ -232,7 +239,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Approach S62', 3])">立即购买</button>
+                  <button class="buy-now-button" @click="Purchase(['肥宅快乐水', 3])">立即购买</button>
                 </div>
 
               </div>
@@ -247,13 +254,13 @@
             <div :body-style="{ padding: '0px' }" shadow="always" style="display: flex;align-items: center;">
               <div>
                 <img
-                  src="https://images.samsung.com.cn/is/image/samsung/p6pim/cn/2208/gallery/cn-galaxy-watch5-pro-sm-r920nztachc-thumb-533245896?$240_240_PNG$"
+                  src="https://www.garmin.com.cn/m/cn/g/products/baseline_s62_600.png"
                   style="width: 150px;">
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">Galaxy Watch5 Pro</p>
-                <p style="font-size: 12px;;">蓝牙版 45mm</p>
+                <p style="font-size: 15px; width: 180px;">Approach S62</p>
+                <p style="font-size: 12px;;">高尔夫GPS智能腕表</p>
                 <div style="display: flex;">
                   <div class="button1">
                     <p style="font-size: 1px;width: 200px;margin-left: -9px;margin-top: -8px;color: #f26e6e;">限时直降100元
@@ -270,7 +277,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Galaxy Watch5 Pro', 4])">立即购买</button>
+                  <button class="buy-now-button" @click="Purchase(['康帅傅红烧牛肉面', 4])">立即购买</button>
                 </div>
 
               </div>
@@ -827,7 +834,26 @@
 <script lang="ts" setup>
 import axios from 'axios';
 import { ElMessage } from "element-plus";
-const price = [2199, 6288, 2199,2199,2199]
+const price = [50, 50, 50,50,50,50,50,50,50,50,50]
+
+  const addToCart = (value: any) => {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // 添加前导零
+    const day = ('0' + currentDate.getDate()).slice(-2); // 添加前导零
+    // 格式为 "xxxx-xx-xx" 的当前日期
+    const formattedDate = `${year}-${month}-${day}`;
+    const data = {
+    id: value, 
+    time: formattedDate
+    };
+    console.log(data)
+    // 向后台传递的值
+    axios.post('http://localhost:9090/cart/add', data)
+ .then(response =>{
+  ElMessage.success("加入购物车成功")
+ })
+  };
 
   const Purchase = (value:any) =>{
     const currentTimestamp = new Date().getTime();// 获取当前时间的时间戳

@@ -270,7 +270,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Galaxy Watch5 Pro', 4])">立即购买</button>
+                  <button class="buy-now-button" @click="Purchase(['康帅傅红烧牛肉面', 4])">立即购买</button>
                 </div>
 
               </div>
@@ -827,7 +827,7 @@
 <script lang="ts" setup>
 import axios from 'axios';
 import { ElMessage } from "element-plus";
-const price = [2199, 6288, 2199,2199,2199]
+const price = [50, 50, 50,50,50,50,50,50,50,50,50]
 
   const Purchase = (value:any) =>{
     const currentTimestamp = new Date().getTime();// 获取当前时间的时间戳

@@ -1,22 +1,22 @@
 <template>
-  <div>
+  <div class="app-container">
     <!-- 走马灯 -->
-    <div class="app-container">
+    <div>
       <el-carousel indicator-position="outside" height="400px">
         <el-carousel-item>
-          <div style="width: 100%; height: 400px;"><img src="../../../picture/手表1.png"
+          <div style="width: 100%; height: 400px;"><img src="../../../picture/电脑走马灯1.png"
               style="width: 100%; height: 100%;"></div>
         </el-carousel-item>
         <el-carousel-item>
-          <div style="width: 100%; height: 400px"><img src="../../../picture/手表2.png"
+          <div style="width: 100%; height: 400px"><img src="../../../picture/电脑走马灯2.png"
               style="width: 100%; height: 100%;"></div>
         </el-carousel-item>
         <el-carousel-item>
-          <div style="width: 100%; height: 400px;"><img src="../../../picture/手表3.png"
+          <div style="width: 100%; height: 400px;"><img src="../../../picture/电脑走马灯3.png"
               style="width: 100%; height: 100%;"></div>
         </el-carousel-item>
         <el-carousel-item>
-          <div style="width: 100%; height: 400px;"><img src="../../../picture/手表4.png"
+          <div style="width: 100%; height: 400px;"><img src="../../../picture/电脑走马灯4.png"
               style="width: 100%; height: 100%;"></div>
         </el-carousel-item>
       </el-carousel>
@@ -43,8 +43,8 @@
             <img
               src="https://www.garmin.com.cn/m/cn/g/products/list_fenix7xpro.png"
               style="width: 250px;">
-            <p style="font-size: 20px; font-weight: bold;margin-top: -5px;">fēnix 7X Pro</p>
-            <div style="font-size: 20px;">¥ 7480</div>
+            <p style="font-size: 20px; font-weight: bold;margin-top: -5px;">HUAWEI Mate 60 Pro+</p>
+            <div style="font-size: 20px;">¥ 9999 起 ></div>
           </div>
         </div>
 
@@ -53,12 +53,12 @@
             <div :body-style="{ padding: '0px' }" shadow="always"
               style=" display: flex;align-items: center;height: 100%">
               <div class="text-container">
-                <p style="font-size: 20px; font-weight: bold;margin: 5px;width: 150px;">fēnix 7 Pro</p>
+                <p style="font-size: 20px; font-weight: bold;margin: 5px;width: 150px;">Mate 60 Pro</p>
                 <p style="font-size: 20px;margin: 20px 5px;">¥ 6499 起 ></p>
               </div>
               <div class="image-container">
                 <img
-                  src="https://www.garmin.com.cn/m/cn/g/products/list_fenix7pro.png"
+                  src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202309/gbom/6942103109515/428_428_B85A84324EC75D29F3EDB5ADACA768FBmp.png"
                   style="margin-top: 20px;;width: 200px;">
               </div>
             </div>
@@ -68,12 +68,12 @@
 
             <div style=" display: flex;align-items: center;height: 100%">
               <div class="text-container">
-                <p style="font-size: 20px; font-weight: bold;margin: 5px;width: 150px;">fēnix 7S Pro</p>
-                <p style="font-size: 20px;margin: 20px 5px">¥ 7480</p>
+                <p style="font-size: 20px; font-weight: bold;margin: 5px;width: 150px;">Mate 60</p>
+                <p style="font-size: 20px;margin: 20px 5px">¥ 5499 起 ></p>
               </div>
               <div class="image-container">
                 <img
-                  src="https://www.garmin.com.cn/m/cn/g/products/list_fenix7spro.png"
+                  src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202309/gbom/6942103107719/428_428_B60CE4EFDDD3AEBD2801A5E218B1EFFEmp.png"
                   style="margin-top: 20px;;width: 200px;">
               </div>
             </div>
@@ -93,13 +93,13 @@
             <div :body-style="{ padding: '0px' }" shadow="always" style="display: flex;align-items: center;">
               <div>
                 <img
-                  src="https://www.garmin.com.cn/m/cn/g/products/list_epixpro.png"
+                  src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202311/gbom/6941487293926/428_428_D50DE377227CAD2517913DFD62A62E8Emp.png"
                   style="width: 150px;">
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">易耐时 epix Pro</p>
-                <p style="font-size: 12px;;">商务智能运动手腕</p>
+                <p style="font-size: 15px; width: 180px;">【华为官方翻新】nova 10系列</p>
+                <p style="font-size: 12px;;">前置6000万摄像头</p>
                 <div style="display: flex;">
                   <div class="button1">
                     <p style="font-size: 1px;width: 200px;margin-left: -9px;margin-top: -8px;color: #f26e6e;">限时直降100元
@@ -116,7 +116,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['易耐时 epix Pro', 0])">立即购买</button>
+                  <button class="buy-now-button" @click="buyNow">立即购买</button>
                 </div>
 
               </div>
@@ -132,16 +132,16 @@
             <div :body-style="{ padding: '0px' }" shadow="always" style="display: flex;align-items: center;">
               <div>
                 <img
-                  src="https://www.garmin.com.cn/m/cn/g/products/list_approach-s70.png"
+                  src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202311/gbom/6941487297207/428_428_4C5D0472FF8A88EE423F3D82A066A42Dmp.png"
                   style="width: 150px;">
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">Approach S70</p>
-                <p style="font-size: 12px;;">高尔夫 GPS 智能腕表</p>
+                <p style="font-size: 15px; width: 180px;">【华为官方翻新】HUAWEI P50 Pocket </p>
+                <p style="font-size: 12px;;">精巧宝盒折叠设计</p>
                 <div style="display: flex;">
                   <div class="button1">
-                    <p style="font-size: 1px;width: 200px;margin-left: -12px;margin-top: -8px;color: #f26e6e;">限时直降1200元
+                    <p style="font-size: 1px;width: 200px;margin-left: -9px;margin-top: -8px;color: #f26e6e;">限时直降1200元
                     </p>
                   </div>
                   <div class="button2">
@@ -155,12 +155,19 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥7488</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Approach S70', 1])">立即购买</button>
+                  <button class="buy-now-button" @click="buyNow">立即购买</button>
                 </div>
+
               </div>
+
+
             </div>
+
+
           </div>
+
         </div>
+
       </div>
 
       <!--新款上市-->
@@ -172,13 +179,13 @@
             <div :body-style="{ padding: '0px' }" shadow="always" style="display: flex;align-items: center;">
               <div>
                 <img
-                  src="https://www.garmin.com.cn/m/cn/g/products/list_marq2_golfer.png"
+                  src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202311/gbom/6941487293926/428_428_D50DE377227CAD2517913DFD62A62E8Emp.png"
                   style="width: 150px;">
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">MARQ Golfer (Gen 2)</p>
-                <p style="font-size: 12px;;">高端时尚智能腕表</p>
+                <p style="font-size: 15px; width: 180px;">【华为官方翻新】nova 10系列</p>
+                <p style="font-size: 12px;;">前置6000万摄像头</p>
                 <div style="display: flex;">
                   <div class="button1">
                     <p style="font-size: 1px;width: 200px;margin-left: -9px;margin-top: -8px;color: #f26e6e;">限时直降100元
@@ -195,7 +202,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['MARQ Golfer (Gen 2)', 2])">立即购买</button>
+                  <button class="buy-now-button" @click="buyNow">立即购买</button>
                 </div>
               </div>
 
@@ -209,13 +216,13 @@
             <div :body-style="{ padding: '0px' }" shadow="always" style="display: flex;align-items: center;">
               <div>
                 <img
-                  src="https://www.garmin.com.cn/m/cn/g/products/baseline_s62_600.png"
+                  src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202311/gbom/6941487293926/428_428_D50DE377227CAD2517913DFD62A62E8Emp.png"
                   style="width: 150px;">
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">Approach S62</p>
-                <p style="font-size: 12px;;">高尔夫GPS智能腕表</p>
+                <p style="font-size: 15px; width: 180px;">【华为官方翻新】nova 10系列</p>
+                <p style="font-size: 12px;;">前置6000万摄像头</p>
                 <div style="display: flex;">
                   <div class="button1">
                     <p style="font-size: 1px;width: 200px;margin-left: -9px;margin-top: -8px;color: #f26e6e;">限时直降100元
@@ -232,7 +239,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Approach S62', 3])">立即购买</button>
+                  <button class="buy-now-button" @click="buyNow">立即购买</button>
                 </div>
 
               </div>
@@ -247,13 +254,13 @@
             <div :body-style="{ padding: '0px' }" shadow="always" style="display: flex;align-items: center;">
               <div>
                 <img
-                  src="https://images.samsung.com.cn/is/image/samsung/p6pim/cn/2208/gallery/cn-galaxy-watch5-pro-sm-r920nztachc-thumb-533245896?$240_240_PNG$"
+                  src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202311/gbom/6941487293926/428_428_D50DE377227CAD2517913DFD62A62E8Emp.png"
                   style="width: 150px;">
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">Galaxy Watch5 Pro</p>
-                <p style="font-size: 12px;;">蓝牙版 45mm</p>
+                <p style="font-size: 15px; width: 180px;">【华为官方翻新】nova 10系列</p>
+                <p style="font-size: 12px;;">前置6000万摄像头</p>
                 <div style="display: flex;">
                   <div class="button1">
                     <p style="font-size: 1px;width: 200px;margin-left: -9px;margin-top: -8px;color: #f26e6e;">限时直降100元
@@ -270,7 +277,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Galaxy Watch5 Pro', 4])">立即购买</button>
+                  <button class="buy-now-button" @click="buyNow">立即购买</button>
                 </div>
 
               </div>
@@ -824,50 +831,15 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import axios from 'axios';
-import { ElMessage } from "element-plus";
-const price = [2199, 6288, 2199,2199,2199]
+<script>
 
-  const Purchase = (value:any) =>{
-    const currentTimestamp = new Date().getTime();// 获取当前时间的时间戳
-    const newList = {
-    customerid: '1',
-    customername: 'hxc',
-    cid: '1',
-    cname: null,
-    ctime: currentTimestamp,
-    vid: null,
-    vname: null,
-    vtime: null,
-    status: '1',
-    finish: '1',
-    ftime: null,
-    total:  price[value[1]],
-    remark: null
-};
-const BizSeelOrderToSend = [newList];
-const PriceToSend = [value[0]]
-console.log(newList)
-console.log(value[0])
-axios.post('http://localhost:9090/order/commit', BizSeelOrderToSend)
- .then(response =>{
-  ElMessage.success("购买成功")
- })
- axios.post('http://localhost:9090/order/commitsub', PriceToSend)
- .then(response =>{
- })
-  }
-  </script>
-  
+</script>
 
 <style>
 .card-container {
   display: flex;
 }
-.app-container{
-  margin: 0 150px;
-}
+
 .card {
   margin-right: 25px;
   width: 34%;

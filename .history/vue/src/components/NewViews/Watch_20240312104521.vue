@@ -827,7 +827,7 @@
 <script lang="ts" setup>
 import axios from 'axios';
 import { ElMessage } from "element-plus";
-const price = [2199, 6288, 2199,2199,2199]
+const price = [2199, 6288, 2199,2199,2199,2199,50,50,50,50,50]
 
   const Purchase = (value:any) =>{
     const currentTimestamp = new Date().getTime();// 获取当前时间的时间戳
