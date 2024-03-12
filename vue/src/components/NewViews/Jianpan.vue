@@ -65,7 +65,7 @@
 
   <el-row :gutter="5">
   <!-- 第二行 -->
-  <el-col>
+  <el-col style="height: 10px;">
     <!-- 第二行的内容放在这里 -->
   </el-col>
 </el-row>
@@ -86,9 +86,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>科大讯飞AI智能键盘</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button" style="margin-left: 16px" @click="drawer1 = true">详情</el-button>
-                <el-button text class="button">购买</el-button>
+              <el-button type="primary"  size="small"  style="margin-left: 16px" @click="drawer1 = true">详情</el-button>
+                <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
 
               <el-drawer v-model="drawer1" title="I am the title" :with-header="false"> 
                       <p>机械键盘 T8星火版红轴 ￥799</p>
@@ -119,9 +152,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>雷柏（Rapoo） V500PRO</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button" style="margin-left: 16px" @click="drawer2 = true">详情</el-button>
-                <el-button text class="button">购买</el-button>
+              <el-button type="primary"  size="small"  style="margin-left: 16px" @click="drawer2 = true">详情</el-button>
+                <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
 
               <el-drawer v-model="drawer2" title="I am the title" :with-header="false"> 
                       <p>有线背光机械键盘 104键全尺寸 ￥99</p>
@@ -153,9 +219,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>前行者GX30Z</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button" style="margin-left: 16px" @click="drawer3 = true">详情</el-button>
-                <el-button text class="button">购买</el-button>
+              <el-button type="primary"  size="small"  style="margin-left: 16px" @click="drawer3 = true">详情</el-button>
+                <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
 
               <el-drawer v-model="drawer3" title="I am the title" :with-header="false"> 
                       <p>真机械手感游戏键盘 ￥39.9</p>
@@ -186,9 +285,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>雷神（ThundeRobot）</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button" style="margin-left: 16px" @click="drawer4 = true">详情</el-button>
-                <el-button text class="button">购买</el-button>
+              <el-button type="primary"  size="small"  style="margin-left: 16px" @click="drawer4 = true">详情</el-button>
+                <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
 
               <el-drawer v-model="drawer4" title="I am the title" :with-header="false"> 
                       <p>有线游戏机械键盘KG3089R红轴 幻彩版 ￥98</p>
@@ -212,7 +344,16 @@
 </template>
 
 <script lang="ts" setup scoped>
+
 import { ref } from 'vue'
+
+const visible = ref(false)
+
+import {
+  ShoppingCart,
+  Money,
+  StarFilled,
+} from '@element-plus/icons-vue'
 
 const value1 = ref('')
 const value2 = ref('')

@@ -55,18 +55,53 @@
 
 
 
+    
       <el-card :body-style="{ padding: '0px' }" class="Pbox-card" shadow="always">
     <el-row>
     <el-col :span="6" style="margin: 10px;">
       <div><img src="https://img13.360buyimg.com/n1/jfs/t1/163045/9/40760/71800/65b6456dF7b5eb436/7037db58245f8915.png.avif"></div>
           <div class="bottom">
-           <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">购买</el-button>
+            <el-button text class="button custom-texts"  style="color: #ff0000;">¥16999</el-button>
+            <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
           </div>
     </el-col>
     
     <el-col :span="7" :offset="2" >
-     <p>华为手表WATCH GT3 Pro   ¥16999</p>
+     <p>华为手表WATCH GT3 Pro   </p>
      <p>[健康管理]</p>
      <p>支持血氧自动检测、体温检测、智能心率监测。加入呼吸健康研究，主动筛查肺部感染风险</p>
      <p>[非凡材质]</p>
@@ -87,7 +122,7 @@
 
       <el-row :gutter="5">
   <!-- 第二行 -->
-  <el-col>
+  <el-col style="height: 5px;">
     <!-- 第二行的内容放在这里 -->
   </el-col>
 </el-row>
@@ -98,12 +133,46 @@
       <el-col :span="6" style="margin: 10px;">
       <div><img src="https://img11.360buyimg.com/n1/jfs/t1/210361/27/31672/97743/650f101bFd9e628bb/adce02d2e96a27e9.jpg.avif" style="max-width: 100%; max-height: 100%; "></div>
       <div class="bottom">
-           <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">购买</el-button>
+            <el-button text class="button custom-texts" style="color: #ff0000;">¥5999</el-button>
+            <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
           </div>
     </el-col>
     <el-col :span="7" :offset="2" >
-      <p>HUAWEI WATCH Ultimate 非凡大师 驰骋山地 ¥5999 </p>
+      <p>HUAWEI WATCH Ultimate 非凡大师 驰骋山地 </p>
       <p>[双向北斗卫星消息]</p>
       <p>无地面网络可发送和接收信息，旅行探险，与世界安心畅连</p>
       <p>[尖端科技，卓越科技]</p>
@@ -132,6 +201,7 @@
 
 
       <el-row :gutter="5">
+        <div class="ep-row">
     <el-col
      v-for="(o, index) in 1"
      :key="o"
@@ -146,9 +216,42 @@
        <div style="padding: 14px; display: flex; flex-direction: column;">
          <span>HUAWEI WATCH GT 4 (46mm) 曜石黑 黑色氟橡胶表带</span>
          <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥1438</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥1438</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
@@ -167,9 +270,42 @@
        <div style="padding: 14px; display: flex; flex-direction: column;">
          <span>HUAWEI WATCH FIT 2 活力款 幻夜黑</span>
          <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥599</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥599</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
@@ -188,23 +324,58 @@
        <div style="padding: 14px; display: flex; flex-direction: column;">
          <span>HUAWEI WATCH D 曜石黑 腕部心电血压记录仪</span>
          <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥2288</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥2288</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
    </el-col>
+   </div>
    </el-row>
 
    <el-row :gutter="5">
   <!-- 第二行 -->
-  <el-col>
+  <el-col style="height: 5px;">
     <!-- 第二行的内容放在这里 -->
   </el-col>
 </el-row>
 
    <el-row :gutter="5">
+    <div class="ep-row">
     <el-col
      v-for="(o, index) in 1"
      :key="o"
@@ -219,9 +390,42 @@
        <div style="padding: 14px; display: flex; flex-direction: column;">
          <span>Xiaomi Watch S3</span>
          <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥799</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥799</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
@@ -239,10 +443,43 @@
        />
        <div style="padding: 14px; display: flex; flex-direction: column;">
          <span>小米手环8 Pro 原神定制版</span>
-         <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥549</el-button>
-           <el-button text class="button">购买</el-button>
+         <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">\
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥549</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
@@ -261,13 +498,47 @@
        <div style="padding: 14px; display: flex; flex-direction: column;">
          <span>小米腕部心电血压记录仪</span>
          <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥1999</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥1999</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
    </el-col>
+   </div>
    </el-row>
    
    <div class="border-container">
@@ -275,6 +546,7 @@
    </div>
 
    <el-row :gutter="5">
+    <div class="ep-row">
     <el-col
      v-for="(o, index) in 1"
      :key="o"
@@ -290,9 +562,42 @@
          <p>苹果 Watch Series 8</p>
          <p>GPS+蜂窝款45毫米星光色铝金属表壳星光色运动型表带</p>
          <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥3149</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥3149</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
@@ -312,9 +617,42 @@
         <p>Apple/苹果 Watch Series 9</p>
          <p>GPS款41毫米星光色铝金属表壳 星光色运动型表带</p>
          <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥2999</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥2999</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
@@ -334,18 +672,70 @@
         <p>Apple/苹果 Watch Ultra</p>
          <p>GPS + 蜂窝款 49毫米 钛金属表壳午夜色海洋表带</p>
          <div class="bottom" style="display: flex; justify-content: space-between; align-items: center;">
-          <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥4999</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-texts" style="color: #ff0000;">¥4999</el-button>
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
    </el-col>
+   </div>
    </el-row>
  
   </template>
+
+<script setup lang="ts">
+
+import { ref } from 'vue'
+
+const visible = ref(false)
+
+import {
+  ShoppingCart,
+  Money,
+  StarFilled,
+} from '@element-plus/icons-vue'
+</script>
   
   <style>
+  .ep-row{
+    margin-left: 15px; 
+    margin-right: 15px;
+  }
+  
   .el-row {
     margin-bottom: 20px;
   }
@@ -387,5 +777,11 @@
  width: 100%;
  display: block;
 }
+
+.custom-texts{
+        
+        font-weight: bold;
+        font-size: 16px;
+  }
   </style>
   

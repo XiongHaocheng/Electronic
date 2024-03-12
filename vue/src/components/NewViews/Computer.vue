@@ -31,9 +31,43 @@
          <p>借助AI驱动的DLSS 3技术，在游戏和创意应用中实现性能飞跃，并在全景光线追踪的加持下，缔造栩栩如生的虚拟世界。</p>
          <p>经RTX和AI加速的热门]创意应用，带来更稳定体验的NVIDIA Studio驱动，以及Studio 全套专用工具，为您的创意加速。</p>
          <div class="bottom">
-           <el-button text class="button">加入购物车</el-button>
-           <el-button text class="button">¥ 10399</el-button>
-           <el-button text class="button">购买</el-button>
+          <el-button text class="button custom-text">¥ 10399</el-button>
+
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
          </div>
        </div>
      </el-card>
@@ -50,9 +84,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>联想(Lenovo)小新14 2024款 14英寸轻薄笔记本电脑 霜雪银</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button">¥ 4199</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 4199</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>        
@@ -76,9 +143,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>ROG枪神8 超竞版 14代酷睿i9 16英寸 电竞游戏本笔记本电脑  (i9-14900HX 16G 1T RTX4080 MiniLED)</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button">¥ 19999</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 19999</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -97,9 +197,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>联想(Lenovo)小新15 2024款15.3英寸轻薄笔记本电脑 霜雪银</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button">¥ 4199</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 4199</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -123,9 +256,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>ROG魔霸7 Plus 超能版 17.3英寸 16核新锐龙 电竞游戏本笔记本电脑  (R9 7945HX 液金导热 16G 1T RTX4080 )</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button">¥ 15999</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 15999</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -143,9 +309,42 @@
           <div style="padding: 14px"  class="text-container">
            <p>联想(Lenovo)小新16 2024款AI高能轻薄笔记本电脑 霜雪银</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button">¥ 4399</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 4399</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>        
@@ -169,9 +368,42 @@
           <div style="padding: 14px"  class="text-container">
            <p>ROG幻16 Air酷睿Ultra 9 16英寸设计师游戏笔记本电脑  (U9-185H 32G 1T RTX4060 2.5K 240Hz OLED)铂月白</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button">¥ 13999</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 13999</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -183,7 +415,7 @@
 
   <el-row :gutter="5">
   <!-- 第二行 -->
-  <el-col>
+  <el-col style="height: 10px;">
     <!-- 第二行的内容放在这里 -->
   </el-col>
 </el-row>
@@ -204,8 +436,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>华硕灵耀14 2024 全新酷睿标压Ultra7 2.8K 120Hz OLED屏高颜值AI超轻薄商务办公笔记本电脑  冰川银</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 6799</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -225,8 +491,42 @@
           <div style="padding: 14px">
             <p>华硕a豆14 Air 高性能AI超轻薄本 商务办公学生笔记本电脑  (全新R7-8845H 32G 1T 2.8K 120Hz OLED 预装正版Office) 青</p>
             <div class="bottom">
-              <el-button text class="button">加入购物车</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 5699</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -247,8 +547,42 @@
           <div style="padding: 14px">
             <p>无畏Pro15 2024 AI超轻薄15.6英寸商务办公笔记本电脑  (酷睿Ultra5-125H 32G 1T 2.8K OLED 预装正版Office)EVO蓝</p>
             <div class="bottom">
-              <el-button text class="button">加入购物车</el-button>
-              <el-button text class="button">购买</el-button>
+              <el-button text class="button custom-text">¥ 5999</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -267,16 +601,297 @@
           />
           <div style="padding: 14px">
            <p>天选5 Pro 24核酷睿i9 16英寸电竞游戏本 笔记本电脑  (i9-13980HX 16G 1T RTX4060 2.5K高亮高刷)灰</p>
-            <div class="bottom">
-              <el-button text class="button">加入购物车</el-button> 
-              <el-button text class="button">购买</el-button>
+           <div class="bottom">
+              <el-button text class="button custom-text">¥ 8799</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
       </el-col>
     </div>
     </el-row>
+
+    <el-row :gutter="5">
+  <!-- 第二行 -->
+  <el-col style="height: 10px;">
+    <!-- 第二行的内容放在这里 -->
+  </el-col>
+</el-row>
+
+    <el-row :gutter="20" >
+        <div class = "ep-row">
+      <el-col 
+        v-for="(o, index) in 1"
+        :key="o"
+        :span="6"
+        :offset="index > 0 ? 1 : 0"
+      >
+        <el-card :body-style="{ padding: '0px' }">
+          <img
+            src="https://img12.360buyimg.com/n1/jfs/t1/235144/35/8539/33424/657c09d0Fcdc59b97/43f7d91d1b795107.png.avif"
+            class="computer"
+          />
+          <div style="padding: 14px"  class="text-container">
+            <p>HAEWI国行【2024款英特尔可选酷睿i7】大屏笔记本电脑高性能轻薄本</p>
+            <div class="bottom">
+              <el-button text class="button custom-text">¥ 2199</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+
+      <el-col 
+        v-for="(o, index) in 1"
+        :key="o"
+        :span="6"
+        :offset="index > 0 ? 1 : 0"
+      >
+        <el-card :body-style="{ padding: '0px' }">
+          <img
+            src="https://img10.360buyimg.com/n1/jfs/t1/172639/7/25900/104194/61dede28Ec914e870/1d6f408b3fc00886.jpg.avif"
+            class="computer"
+          />
+          <div style="padding: 14px">
+            <p>HUWI 国行【2024款英特尔可选酷睿】金属笔记本电脑轻薄本</p>
+            <div class="bottom">
+              <el-button text class="button custom-text">¥ 1508</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+
+
+      <el-col 
+        v-for="(o, index) in 1"
+        :key="o"
+        :span="6"
+        :offset="index > 0 ? 1 : 0"
+      >
+        <el-card :body-style="{ padding: '0px' }">
+          <img
+            src="https://p1.lefile.cn/product/adminweb/2023/12/13/kuGhCsSVNQGy9cze2P2YHQ9NL-9213.jpg"
+            class="computer"
+          />
+          <div style="padding: 14px">
+            <p>ThinkPad X1 Carbon AI 2024 英特尔酷睿 Ultra7全互联旗舰本01CD</p>
+            <div class="bottom">
+              <el-button text class="button custom-text">¥ 16999</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+
+      <el-col 
+        v-for="(o, index) in 1"
+        :key="o"
+        :span="6"
+        :offset="index > 0 ? 1 : 0"
+      >
+        <el-card :body-style="{ padding: '0px' }">
+          <img
+            src="https://p1.lefile.cn/product/adminweb/2023/08/11/05ICCEE3XHj9hinRcrrbvTvPy-0911.jpg"
+            class="computer"
+          />
+          <div style="padding: 14px">
+           <p>ThinkBook 14 2023 英特尔酷睿i5 锐智系创造本 6LCD</p>
+           <div class="bottom">
+              <el-button text class="button custom-text">¥ 4399</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+    </div>
+    </el-row>
+
   </template>
+
+
+<script setup lang="ts">
+
+import { ref } from 'vue'
+
+const visible = ref(false)
+
+import {
+  ShoppingCart,
+  Money,
+  StarFilled,
+} from '@element-plus/icons-vue'
+</script>
   
   <style scoped>
 
@@ -305,8 +920,9 @@
     align-items: center;
   }
   
+  
   .button {
-    padding: 0;
+    padding: 0px  0px;
     min-height: auto;
   }
   
@@ -315,6 +931,11 @@
     display: block;
   }
 
+  .custom-text {
+        color: #ff0000;
+        font-weight: bold;
+        font-size: 16px;
+  }
 
   </style>
   
