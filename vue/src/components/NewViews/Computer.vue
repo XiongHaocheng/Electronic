@@ -31,6 +31,43 @@
          <p>借助AI驱动的DLSS 3技术，在游戏和创意应用中实现性能飞跃，并在全景光线追踪的加持下，缔造栩栩如生的虚拟世界。</p>
          <p>经RTX和AI加速的热门]创意应用，带来更稳定体验的NVIDIA Studio驱动，以及Studio 全套专用工具，为您的创意加速。</p>
          <div class="bottom">
+          <el-button text class="button custom-text">¥ 10399</el-button>
+
+          <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
            <el-button text class="button" @click="addToCart(1)">加入购物车</el-button>
            <el-button text class="button">¥ {{ price[0] }}</el-button>
            <el-button  text class="button" @click="Purchase(['马良铅笔', 0])">购买</el-button>
@@ -53,6 +90,42 @@
                 <el-button text class="button" @click="addToCart(2)">加入购物车</el-button>
                 <el-button text class="button">¥ {{ price[1] }}</el-button>
                 <el-button text class="button" @click="Purchase(['水桶', 1])">购买</el-button>
+              <el-button text class="button custom-text">¥ 4199</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>        
@@ -79,6 +152,42 @@
                 <el-button text class="button" @click="addToCart(3)">加入购物车</el-button>
                 <el-button text class="button">¥ {{ price[2] }}</el-button>
               <el-button text class="button" @click="Purchase(['旺旺饼干', 2])">购买</el-button>
+              <el-button text class="button custom-text">¥ 19999</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -100,6 +209,42 @@
                 <el-button text class="button" @click="addToCart(4)">加入购物车</el-button>
                 <el-button text class="button">¥ {{ price[3] }}</el-button>
               <el-button text class="button" @click="Purchase(['肥宅快乐水', 3])">购买</el-button>
+              <el-button text class="button custom-text">¥ 4199</el-button>
+              <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
             </div>
           </div>
         </el-card>
@@ -123,9 +268,9 @@
           <div style="padding: 14px"  class="text-container">
             <p>ROG魔霸7 Plus 超能版 17.3英寸 16核新锐龙 电竞游戏本笔记本电脑  (R9 7945HX 液金导热 16G 1T RTX4080 )</p>
             <div class="bottom">
-                <el-button text class="button" @click="addToCart(5)">加入购物车</el-button>
-                <el-button text class="button">¥ {{ price[4] }}</el-button>
-              <el-button text class="button" @click="Purchase(['康帅傅红烧牛肉面', 4])">购买</el-button>
+                <el-button text class="button">加入购物车</el-button>
+                <el-button text class="button">¥ 15999</el-button>
+              <el-button text class="button">购买</el-button>
             </div>
           </div>
         </el-card>
@@ -143,9 +288,9 @@
           <div style="padding: 14px"  class="text-container">
            <p>联想(Lenovo)小新16 2024款AI高能轻薄笔记本电脑 霜雪银</p>
             <div class="bottom">
-                <el-button text class="button" @click="addToCart(6)">加入购物车</el-button>
-                <el-button text class="button">¥ {{ price[5] }}</el-button>
-              <el-button text class="button" @click="Purchase(['神光棒', 5])">购买</el-button>
+                <el-button text class="button">加入购物车</el-button>
+                <el-button text class="button">¥ 4399</el-button>
+              <el-button text class="button">购买</el-button>
             </div>
           </div>
         </el-card>        
@@ -169,9 +314,9 @@
           <div style="padding: 14px"  class="text-container">
            <p>ROG幻16 Air酷睿Ultra 9 16英寸设计师游戏笔记本电脑  (U9-185H 32G 1T RTX4060 2.5K 240Hz OLED)铂月白</p>
             <div class="bottom">
-                <el-button text class="button" @click="addToCart(7)">加入购物车</el-button>
-                <el-button text class="button">¥ {{ price[6] }}</el-button>
-              <el-button text class="button" @click="Purchase(['黑框眼镜', 6])">购买</el-button>
+                <el-button text class="button">加入购物车</el-button>
+                <el-button text class="button">¥ 13999</el-button>
+              <el-button text class="button">购买</el-button>
             </div>
           </div>
         </el-card>
@@ -183,7 +328,7 @@
 
   <el-row :gutter="5">
   <!-- 第二行 -->
-  <el-col>
+  <el-col style="height: 10px;">
     <!-- 第二行的内容放在这里 -->
   </el-col>
 </el-row>
@@ -204,9 +349,8 @@
           <div style="padding: 14px"  class="text-container">
             <p>华硕灵耀14 2024 全新酷睿标压Ultra7 2.8K 120Hz OLED屏高颜值AI超轻薄商务办公笔记本电脑  冰川银</p>
             <div class="bottom">
-                <el-button text class="button" @click="addToCart(8)">加入购物车</el-button>
-                <el-button text class="button">¥ {{ price[7] }}</el-button>
-              <el-button text class="button" @click="Purchase(['测试分类', 7])">购买</el-button>
+                <el-button text class="button">加入购物车</el-button>
+              <el-button text class="button">购买</el-button>
             </div>
           </div>
         </el-card>
@@ -226,9 +370,8 @@
           <div style="padding: 14px">
             <p>华硕a豆14 Air 高性能AI超轻薄本 商务办公学生笔记本电脑  (全新R7-8845H 32G 1T 2.8K 120Hz OLED 预装正版Office) 青</p>
             <div class="bottom">
-              <el-button text class="button" @click="addToCart(9)">加入购物车</el-button>
-              <el-button text class="button">¥ {{ price[8] }}</el-button>
-              <el-button text class="button" @click="Purchase(['', 8])">购买</el-button>
+              <el-button text class="button">加入购物车</el-button>
+              <el-button text class="button">购买</el-button>
             </div>
           </div>
         </el-card>
@@ -249,9 +392,8 @@
           <div style="padding: 14px">
             <p>无畏Pro15 2024 AI超轻薄15.6英寸商务办公笔记本电脑  (酷睿Ultra5-125H 32G 1T 2.8K OLED 预装正版Office)EVO蓝</p>
             <div class="bottom">
-              <el-button text class="button" @click="addToCart(10)">加入购物车</el-button>
-              <el-button text class="button">¥ {{ price[9] }}</el-button>
-              <el-button text class="button" @click="Purchase(['', 9])">购买</el-button>
+              <el-button text class="button">加入购物车</el-button>
+              <el-button text class="button">购买</el-button>
             </div>
           </div>
         </el-card>
@@ -271,74 +413,17 @@
           <div style="padding: 14px">
            <p>天选5 Pro 24核酷睿i9 16英寸电竞游戏本 笔记本电脑  (i9-13980HX 16G 1T RTX4060 2.5K高亮高刷)灰</p>
             <div class="bottom">
-              <el-button text class="button" @click="addToCart(11)">加入购物车</el-button> 
-              <el-button text class="button">¥ {{ price[10] }}</el-button>
-              <el-button text class="button" @click="Purchase(['', 10])">购买</el-button>
+              <el-button text class="button">加入购物车</el-button> 
+              <el-button text class="button">购买</el-button>
             </div>
           </div>
         </el-card>
       </el-col>
     </div>
     </el-row>
+
   </template>
-
-<script lang="ts" setup>
-import axios from 'axios';
-import { ElMessage } from "element-plus";
-const price = [50, 50, 50,50,50,50,50,50,50,50,50]
-
-  const addToCart = (value: any) => {
-    const currentDate = new Date();
-    const year = currentDate.getFullYear();
-    const month = ('0' + (currentDate.getMonth() + 1)).slice(-2); // 添加前导零
-    const day = ('0' + currentDate.getDate()).slice(-2); // 添加前导零
-    // 格式为 "xxxx-xx-xx" 的当前日期
-    const formattedDate = `${year}-${month}-${day}`;
-    const data = {
-    id: value, 
-    time: formattedDate
-    };
-    console.log(data)
-    // 向后台传递的值
-    axios.post('http://localhost:9090/cart/add', data)
- .then(response =>{
-  ElMessage.success("加入购物车成功")
- })
-  };
-
-  const Purchase = (value:any) =>{
-    const currentTimestamp = new Date().getTime();// 获取当前时间的时间戳
-    const newList = {
-    customerid: '1',
-    customername: 'hxc',
-    cid: '1',
-    cname: null,
-    ctime: currentTimestamp,
-    vid: null,
-    vname: null,
-    vtime: null,
-    status: '1',
-    finish: '1',
-    ftime: null,
-    total:  price[value[1]],
-    remark: null
-};
-const BizSeelOrderToSend = [newList];
-const PriceToSend = [value[0]]
-console.log(newList)
-console.log(value[0])
-axios.post('http://localhost:9090/order/commit', BizSeelOrderToSend)
- .then(response =>{
-  ElMessage.success("购买成功")
- })
- axios.post('http://localhost:9090/order/commitsub', PriceToSend)
- .then(response =>{
- })
-  }
-  </script>
   
-
-
   <style scoped>
 
   .ep-row{
@@ -366,8 +451,9 @@ axios.post('http://localhost:9090/order/commit', BizSeelOrderToSend)
     align-items: center;
   }
   
+  
   .button {
-    padding: 0;
+    padding: 0px  0px;
     min-height: auto;
   }
   
@@ -376,6 +462,11 @@ axios.post('http://localhost:9090/order/commit', BizSeelOrderToSend)
     display: block;
   }
 
+  .custom-text {
+        color: #ff0000;
+        font-weight: bold;
+        font-size: 16px;
+  }
 
   </style>
   

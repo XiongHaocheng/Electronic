@@ -64,7 +64,7 @@
 
   <el-row :gutter="5">
   <!-- 第二行 -->
-  <el-col>
+  <el-col style="height: 10px;">
     <!-- 第二行的内容放在这里 -->
   </el-col>
 </el-row>
@@ -85,11 +85,44 @@
           <div style="padding: 14px"  class="text-container">
             <p>罗技gpw二代</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button" style="margin-left: 16px" @click="drawer1 = true">详情</el-button>
-                <el-button text class="button">购买</el-button>
+              <el-button type="primary"  size="small"  style="margin-left: 16px" @click="drawer1 = true">详情</el-button>
+                <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
 
-              <el-drawer v-model="drawer1" title="I am the title" :with-header="false"> 
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
+
+              <el-drawer  v-model="drawer1" title="I am the title" :with-header="false"> 
                       <p>无线游戏鼠标电竞狗屁王二代 ￥919</p>
                       <p>人体工学无线双模机械轻量化63g GPW2代猛男粉</p>
                       <img src="../../../picture/鼠标1.png" class="drawer-image"/>
@@ -118,9 +151,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>罗技（G） G502HERO</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button" style="margin-left: 16px" @click="drawer2 = true">详情</el-button>
-                <el-button text class="button">购买</el-button>
+              <el-button type="primary"  size="small"  style="margin-left: 16px" @click="drawer2 = true">详情</el-button>
+                <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
 
               <el-drawer v-model="drawer2" title="I am the title" :with-header="false"> 
                       <p>熊猫特典版SE电竞游戏有线鼠标 ￥269</p>
@@ -152,9 +218,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>雷蛇（Razer）</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button" style="margin-left: 16px" @click="drawer3 = true">详情</el-button>
-                <el-button text class="button">购买</el-button>
+              <el-button type="primary"  size="small"  style="margin-left: 16px" @click="drawer3 = true">详情</el-button>
+                <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
 
               <el-drawer v-model="drawer3" title="I am the title" :with-header="false"> 
                       <p>鼠标炼狱蝰蛇标准版有线游戏机械黑色 ￥107</p>
@@ -185,9 +284,42 @@
           <div style="padding: 14px"  class="text-container">
             <p>华硕天选游戏无线鼠标</p>
             <div class="bottom">
-                <el-button text class="button">加入购物车</el-button>
-                <el-button text class="button" style="margin-left: 16px" @click="drawer4 = true">详情</el-button>
-                <el-button text class="button">购买</el-button>
+              <el-button type="primary"  size="small"  style="margin-left: 16px" @click="drawer4 = true">详情</el-button>
+                <el-button-group class="ml-4 ">
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="收藏"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="StarFilled" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="加入购物车"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="ShoppingCart" />
+            </template>
+            </el-popover>
+
+            <el-popover
+                placement="top"
+                :width="20"
+                trigger="hover"
+                content="购买"
+            >
+            <template #reference>
+              <el-button type="default" size="small" :icon="Money" />
+            </template>
+            </el-popover>
+
+          </el-button-group>
 
               <el-drawer v-model="drawer4" title="I am the title" :with-header="false"> 
                       <p>蓝牙双模连接 轻质便携 ￥229</p>
@@ -211,7 +343,16 @@
 </template>
 
 <script lang="ts" setup scoped>
+
 import { ref } from 'vue'
+
+const visible = ref(false)
+
+import {
+  ShoppingCart,
+  Money,
+  StarFilled,
+} from '@element-plus/icons-vue'
 
 const value1 = ref('')
 const value2 = ref('')
@@ -335,6 +476,7 @@ const drawer4 = ref(false)
   display: block; /* 确保图片作为块级元素，以便应用最大宽度和高度 */
   margin: auto; /* 居中显示图片 */
 }
+
   
 
   </style>

@@ -247,13 +247,13 @@
             <div :body-style="{ padding: '0px' }" shadow="always" style="display: flex;align-items: center;">
               <div>
                 <img
-                  src="https://images.samsung.com.cn/is/image/samsung/p6pim/cn/2208/gallery/cn-galaxy-watch5-pro-sm-r920nztachc-thumb-533245896?$240_240_PNG$"
+                  src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202311/gbom/6941487293926/428_428_D50DE377227CAD2517913DFD62A62E8Emp.png"
                   style="width: 150px;">
               </div>
 
               <div style="text-align: left;margin-left: 20px;">
-                <p style="font-size: 15px; width: 180px;">Galaxy Watch5 Pro</p>
-                <p style="font-size: 12px;;">蓝牙版 45mm</p>
+                <p style="font-size: 15px; width: 180px;">【华为官方翻新】nova 10系列</p>
+                <p style="font-size: 12px;;">前置6000万摄像头</p>
                 <div style="display: flex;">
                   <div class="button1">
                     <p style="font-size: 1px;width: 200px;margin-left: -9px;margin-top: -8px;color: #f26e6e;">限时直降100元
@@ -270,7 +270,7 @@
                   <div class="discounted-price">
                     <del style="font-size: 5px;">¥2299</del>
                   </div>
-                  <button class="buy-now-button" @click="Purchase(['Galaxy Watch5 Pro', 4])">立即购买</button>
+                  <button class="buy-now-button" @click="buyNow">立即购买</button>
                 </div>
 
               </div>
@@ -824,42 +824,9 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import axios from 'axios';
-import { ElMessage } from "element-plus";
-const price = [2199, 6288, 2199,2199,2199]
+<script>
 
-  const Purchase = (value:any) =>{
-    const currentTimestamp = new Date().getTime();// 获取当前时间的时间戳
-    const newList = {
-    customerid: '1',
-    customername: 'hxc',
-    cid: '1',
-    cname: null,
-    ctime: currentTimestamp,
-    vid: null,
-    vname: null,
-    vtime: null,
-    status: '1',
-    finish: '1',
-    ftime: null,
-    total:  price[value[1]],
-    remark: null
-};
-const BizSeelOrderToSend = [newList];
-const PriceToSend = [value[0]]
-console.log(newList)
-console.log(value[0])
-axios.post('http://localhost:9090/order/commit', BizSeelOrderToSend)
- .then(response =>{
-  ElMessage.success("购买成功")
- })
- axios.post('http://localhost:9090/order/commitsub', PriceToSend)
- .then(response =>{
- })
-  }
-  </script>
-  
+</script>
 
 <style>
 .card-container {
