@@ -1,7 +1,7 @@
 <template>
-  <div class="app-container">
+  <div >
     <!-- 走马灯 -->
-    <div>
+    <div class="app-container">
       <el-carousel indicator-position="outside" height="400px">
         <el-carousel-item>
           <div style="width: 100%; height: 400px;"><img src="https://res.vmallres.com/uomcdn/CN/cms/2023-12/c785fd4ff46b4ca3b256a319287ac73e.jpg"
@@ -507,7 +507,7 @@
               src="https://res2.vmallres.com/pimages/uomcdn/CN/pms/202311/gbom/6941487297665/group/428_428_0ABA704DE8B6A53D8AFBF98197B51E56.png"
               style="width: 150px;">
             <div style="text-align:center;">
-              <p style="font-size: 15px; width: 180px;">HUAWEI Mate Xs 2 典藏版 </p>
+              <p style="font-size: 15px; width: 180px;">HUAWEI MateXs2典藏版 </p>
               <p style="font-size: 12px;opacity: 0.6;">超轻薄|超平整|超可靠</p>
               <div style="display: flex;">
                 <div class="button4">
@@ -835,7 +835,9 @@
 .card-container {
   display: flex;
 }
-
+.app-container{
+  margin: 0 150px;
+}
 .card {
   margin-right: 25px;
   width: 34%;
